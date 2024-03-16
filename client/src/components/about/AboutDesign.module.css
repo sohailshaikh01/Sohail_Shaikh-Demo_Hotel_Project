@@ -1,0 +1,179 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+.about::before{
+    content: " ";
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: url("../images/homepage_bg.jpg");
+    background-size: cover;
+    filter: brightness(15%);
+}
+.header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    filter: brightness(100%);
+    background-color: black;
+    position: sticky;
+    top: 0;
+    z-index: 3;
+}
+.menuIcon:hover{
+    cursor: pointer;
+}
+.menuIcon{
+    position: relative;
+    left: 15px;
+    color: white;
+}
+.menuIconBar{
+    height:4px;
+    width: 27px;
+    margin: 4px;
+    border-radius: 6px;
+    background-color: white;
+}
+.closeMenuIcon:hover{
+    cursor: pointer;
+}
+.closeMenuIcon{
+    filter:brightness(100%);
+    position: relative;
+    color: white;
+    font-size: 1.63rem;
+    font-weight: 500;
+}
+.sidebarMenu{
+    filter: brightness(100%);
+    height: 63vh;
+    width: 15vw;
+    color: white;
+    background-color: #343434;
+    text-align: center;
+    position: fixed;
+    border-radius: 20px;
+    z-index: 2;
+}
+.sidebarMenuItems span:hover{
+    cursor: pointer;
+}
+.sidebarMenuItems{
+    padding: 25px 0;
+    font-size: 0.94rem;
+    font-weight: 500;
+}
+hr{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width: 120px;
+    height: 1px;
+    border-radius: 2px;
+    background-color: white;
+}
+.nav{
+    font-size: 1rem;
+    justify-items: flex-end;
+    color: white;
+    position: relative;
+    right: 20px;
+    font-weight: 500;
+}
+.navItem:hover{
+    cursor: pointer;
+}
+.navItem{
+    display: inline-block;
+    padding: 10px 30px;
+    color: white;
+}
+.section{
+    text-align: center;
+    color: white;
+    filter: brightness(100%);
+    margin-top: 5%;
+    z-index: 1;
+}
+.section p{
+    text-indent: 1.7%;
+    font-size: 1.06rem;
+}
+.topParagraph b{
+    letter-spacing: 0.3px;
+}
+.middleParagraph{
+    margin-top: 2.5%;
+}
+.bottomParagraph{
+    margin-top: 2.5%;
+}
+.footer{
+    filter: brightness(100%);
+    color: white;
+}
+.footContent1{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+.footImages{
+    filter: brightness(100%);
+    display: flex;
+    position: relative;
+    bottom: 15px;
+    margin-top: 25px;
+    justify-content: center;
+}
+.footLogo{
+    padding: 0 4px;
+    height: 24px;
+    width: 24px;
+    border-radius: 50%;
+}
+.footContent2{
+    font-size: 0.94rem;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+}
+.privacyAndTerms{
+    filter: brightness(100%);
+    color: white;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    bottom: 10px;
+    margin-top: 25px;
+    font-size: 0.81rem;
+}
+
+@media screen and (max-width: 1024px) {
+    .menuIcon{
+        top: -1px;
+    }
+    .closeMenuIcon{
+        top: -1px;
+    }
+    .navItem{
+        padding: 12px 11px 20px 11px;
+        position: relative;
+        top: 3px;
+        left: 2%;
+    }
+    #loginLink, #logoutLink{
+        padding-right: 0;
+    }
+    .sidebarMenu{
+        width: 50vw;
+        height: fit-content;
+    }
+    .section{
+        margin-top: 8%;
+        padding: 0 6%;
+    }
+}

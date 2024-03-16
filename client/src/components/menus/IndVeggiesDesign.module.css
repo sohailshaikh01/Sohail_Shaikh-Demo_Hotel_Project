@@ -1,0 +1,446 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+.indVeg{
+    background-color: black;
+}
+.header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    filter: brightness(100%);
+    background-color: black;
+    position: sticky;
+    top: 0;
+    z-index: 3;
+}
+.menuIcon:hover{
+    cursor: pointer;
+}
+.menuIcon{
+    position: relative;
+    left: 15px;
+    color: white;
+}
+.menuIconBar{
+    height:4px;
+    width: 27px;
+    margin: 4px;
+    border-radius: 6px;
+    background-color: white;
+}
+.closeMenuIcon:hover{
+    cursor: pointer;
+}
+.closeMenuIcon{
+    filter:brightness(100%);
+    color: white;
+    font-size: 1.63rem;
+    font-weight: 500;
+}
+.sidebarMenu{
+    filter: brightness(100%);
+    height: 63vh;
+    width: 15vw;
+    color: white;
+    background-color: #343434;
+    text-align: center;
+    position: fixed;
+    border-radius: 20px;
+    z-index: 2;
+}
+.sidebarMenuItems span:hover{
+    cursor: pointer;
+}
+.sidebarMenuItems{
+    padding: 25px 0;
+    font-size: 0.94rem;
+    font-weight: 500;
+}
+hr{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width: 120px;
+    height: 1px;
+    border-radius: 2px;
+    background-color: white;
+}
+.nav{
+    font-size: 1rem;
+    justify-items: flex-end;
+    color: white;
+    position: relative;
+    right: 20px;
+    font-weight: 500;
+}
+.navItem:hover{
+    cursor: pointer;
+}
+.navItem{
+    display: inline-block;
+    padding: 10px 30px;
+}
+.section{
+    filter: brightness(100%);
+    color: white;
+    z-index: 1;
+}
+.topHeading{
+    display: flex;
+    position: relative;
+    top:42px;
+    justify-content: center;
+    padding: 10px 0;
+    font-size: 2.5rem;
+    letter-spacing: 8px;
+    text-shadow: 2px 1px 9px white;
+}
+.trackCartAlert{
+    position: absolute;
+    right:0px;
+    filter: brightness(0%);
+    animation: disappear 6s linear 3s infinite alternate;
+}
+@keyframes disappear{
+    to{filter: brightness(100%);}
+}
+.arrowSymbol{
+    font-size: 3.75rem;
+    display: inline-block;
+    position: relative;
+    right: 17px;
+    bottom: 25px;
+    transform: rotate(220deg);
+}
+.trackCartAlertText{
+    display: inline-block;
+    position: relative;
+    font-size: 0.94rem;
+    top: 25px;
+    right: 80px;
+    height: 43px;
+    border-radius: 12px;
+    text-align: center;
+    width: 140px;
+    font-weight: 500;
+    background-color: rgb(214, 11, 11);
+}
+.indVegList{    
+    font-size: 2.19rem;
+}
+.indVegMenuItemImg{
+    height: 50vh;
+    width: 25vw;
+    border-radius: 25px;
+}
+.indVegMenuItem{
+    display: flex;
+    justify-content: space-between;
+}
+.indVegMenuItemDish{
+    font-size: 1.44rem;
+}
+.indVegMenuItemPrice{
+    font-size: 1.25rem;
+}
+.addButton{
+    display: block;
+    height: 35px;
+    width: 88px;
+    color: black;
+    font-size: 1.13rem;
+    font-weight: 500;
+    border-radius: 15px;
+    background-color: #ADD8E6;
+    position: relative;
+    top: 15px;
+}
+.addButton span{
+    display: inline-block;
+    padding: 5.2% 8%;
+}
+.addButton:hover{
+    cursor: default;
+}
+.indVegItemNumsAlert{
+    font-size: 1rem;
+    position: relative;
+    top: 25px;
+    visibility: visible;
+}
+.indVegItemCount{
+    position: relative;
+    visibility: visible;
+}
+.indVegItemCount div{
+    height: 27px;
+    width: 27px;
+    font-size: 1.56rem;
+    display: inline-block;
+    color: black;
+    position: relative;
+    top:20px;
+}
+.indVegItemCount span{
+    position: relative;
+    bottom: 5px;
+}
+.arithChar{
+    background-color: #FFFFF0;
+}
+.arithChar:hover{
+    cursor: default;
+}
+.itemCount{
+    background-color: rgba(250,249,246,0.88);
+}
+.itemCount:hover{
+    cursor: default;
+}
+.indVegRow1{
+    display: inline-block;
+    position: relative;
+    top: 90px;
+}
+.indVegRow2{
+    display: inline-block;
+    position: relative;
+    top: 150px;
+}
+.indVegRow3{
+    display: inline-block;
+    position: relative;
+    top: 210px;
+}
+.indVegMenuItem1{
+    display: inline-block;
+    padding: 0 50px;
+}
+.indVegMenuItem1 .indVegMenuItemImg{
+    background: url('../images/paneer.jpg');
+    background-size: cover;
+}
+.indVegMenuItem2{
+    display: inline-block;
+    padding: 0 50px;    
+}
+.indVegMenuItem2 .indVegMenuItemImg{
+    background: url('../images/palak_paneer.jpg');
+    background-size: cover;
+}
+.indVegMenuItem3{
+    display: inline-block;
+    padding: 0 50px;   
+}
+.indVegMenuItem3 .indVegMenuItemImg{
+    background: url('../images/chapati.jpg');
+    background-size: cover;
+}
+.indVegMenuItem4{
+    display: inline-block;
+    padding: 0 50px;    
+}
+.indVegMenuItem4 .indVegMenuItemImg{
+    background: url('../images/plain_rice.jpg');
+    background-size: cover;
+}
+.indVegMenuItem5{
+    display: inline-block;
+    padding: 0 50px;
+}
+.indVegMenuItem5 .indVegMenuItemImg{
+    background: url('../images/jeera_rice.jpg');
+    background-size: cover;
+}
+.indVegMenuItem6{
+    display: inline-block;
+    padding: 0 50px;
+}
+.indVegMenuItem6 .indVegMenuItemImg{
+    background: url('../images/veg_biryani.jpg');
+    background-size: cover;
+}
+.indVegMenuItem7{
+    display: inline-block;
+    padding: 0 50px;
+}
+.indVegMenuItem7 .indVegMenuItemImg{
+    background: url('../images/masoor.jpg');
+    background-size: cover;
+}
+.indVegMenuItem8{
+    display: inline-block;
+    padding: 0 50px;
+}
+.indVegMenuItem8 .indVegMenuItemImg{
+    background: url('../images/matki-curry.jpg');
+    background-size: cover;
+}
+.indVegMenuItem9{
+    display: inline-block;
+    padding: 0 50px;
+}
+.indVegMenuItem9 .indVegMenuItemImg{
+    background: url('../images/chana.jpg');
+    background-size: cover;
+}
+.footer{
+    background-color: black;
+    filter: brightness(100%);
+    color: white;
+    padding: 60px 0 0 0;
+    position: relative;
+    top:240px;
+}
+.footContent1{
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+    padding: 10px 0;
+}
+.footContent2{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    bottom: 2px;
+}
+.footContent3{
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+}
+.footImages{
+    filter: brightness(100%);
+    display: flex;
+    position: relative;
+    bottom: 15px;
+    margin-top: 20px;
+    justify-content: center;
+}
+.footLogo{
+    padding: 0 4px;
+    height: 24px;
+    width: 24px;
+    border-radius: 50%;
+}
+.privacyAndTerms{
+    filter: brightness(100%);
+    color: white;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    bottom: 10px;
+    margin-top: 17px;
+    font-size: 0.81rem;
+}
+
+@media screen and (max-width: 1024px) {
+    .nav{
+        right: 0;
+        margin-top: 1.5%;
+        align-self: flex-end;
+        width: fit-content;
+    }
+    .navItem{
+        font-size: 1rem;
+        color: white;
+        padding: 1% 7.5%;
+        display: inline-block;
+        width:fit-content;
+    }
+    #homepageLink, #cartLink, #loginLink{
+        font-size: 1rem;
+        padding: 1% 7.5%;
+        display: inline-block;
+        width:fit-content;
+    }
+    #homepageLink{
+        margin-left: -2%;
+    }
+    #cartLink{
+        margin-top: 7%;
+        margin-left: 25.6%;
+        padding-right: 7.6%;
+        position: relative;
+        left: 3.7%;
+    }
+    #loginLink{
+        width: 50px;
+        position: relative;
+        left: 2%;
+    }
+    .sidebarMenu{
+        width: 50vw;
+        height:fit-content;
+    }
+    .topHeading{
+        position: relative;
+        top: 95px;
+        left: 2%;
+    }
+    .trackCartAlert{
+        right:-15%;
+    }
+    .arrowSymbol{
+        margin-top: 9.7%;
+        position: relative;
+        left: -19%;
+        font-size: 2rem;
+    }
+    .trackCartAlertText{
+        position: relative;
+        top: 18px;
+        left: -40%;
+    }
+    .indVegMenuItemImg{
+        height: 30vh;
+        width: 70vw;
+    }
+    .indVegMenuItemDish{
+        font-size: 1.25rem;
+    }    
+    .indVegMenuItemPrice{
+        font-size: 1rem;
+    }
+    .addButton{
+        height: 36px;
+    }
+    .addButton span{
+        padding: 5.1% 8%;
+    }
+    .indVegRow1{
+        top: 0;
+    }
+    .indVegRow2{
+        top: 0;
+    }
+    .indVegRow3{
+        top: 0;
+    }
+    .indVegMenuItem1{
+        margin-top: 39%;
+    }
+    .indVegMenuItem2{
+        display: inline-block;
+        padding: 15% 0px;
+    }
+    .indVegMenuItem4{
+        display: inline-block;
+        padding: 15% 0px;
+    }
+    .indVegMenuItem6{
+        display: inline-block;
+        padding: 15% 0px;
+    }
+    .indVegMenuItem8{
+        display: inline-block;
+        padding: 15% 0px;
+    }
+    .footer{
+        position: relative;
+        top: -4px;
+        margin-top: 6%;
+    }
+}

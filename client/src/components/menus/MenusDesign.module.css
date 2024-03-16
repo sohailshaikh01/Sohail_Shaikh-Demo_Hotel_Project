@@ -1,0 +1,323 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+.menus{
+    background-color: black;
+}
+.header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    filter: brightness(100%);
+    background-color: rgba(0,0,0,0.45);
+    position: sticky;
+    top: 0;
+    z-index: 3;
+}
+.menuIcon:hover{
+    cursor: pointer;
+}
+.menuIcon{
+    position: relative;
+    left: 15px;
+    color: white;
+}
+.menuIconBar{
+    height: 4px;
+    width: 27px;
+    margin: 4px;
+    border-radius: 6px;
+    background-color: white;
+}
+.closeMenuIcon:hover{
+    cursor: pointer;
+}
+.closeMenuIcon{
+    filter: brightness(100%);
+    position: relative;
+    color: white;
+    font-size: 1.63rem;
+    font-weight: 500;
+}
+.sidebarMenu{
+    filter: brightness(100%);
+    height: 63vh;
+    width: 15vw;
+    color: white;
+    background-color: #343434;
+    text-align: center;
+    position: fixed;
+    border-radius: 20px;
+    z-index: 2;
+}
+.sidebarMenuItems span:hover{
+    cursor: pointer;
+}
+.sidebarMenuItems{
+    padding: 25px 0;
+    font-size: 0.94rem;
+    font-weight: 500;
+}
+hr{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width: 120px;
+    height: 1px;
+    border-radius: 2px;
+    background-color: white;
+}
+.nav{
+    font-size: 1rem;
+    justify-items: flex-end;
+    color: white;
+    position: relative;
+    right: 20px;
+    font-weight: 500;
+}
+.navItem:hover{
+    cursor: pointer;
+}
+.navItem{
+    display: inline-block;
+    padding: 10px 30px;
+}
+.section{
+    filter: brightness(100%);
+    color: white;
+    z-index: 1;
+}
+.topHeading{
+    display: flex;
+    position: relative;
+    top:42px;
+    justify-content: center;
+    padding: 210px 0;
+    font-size: 0rem;
+    letter-spacing: 8px;
+    text-shadow: 2px 1px 9px white;
+}
+@keyframes styleChange1{
+    to{
+        font-size: 2.5rem;
+        padding: 10px 0;
+    }
+}
+.menuListItems:hover{
+    cursor: pointer;
+}
+.menuListItems{
+    font-size: 1.25rem;
+    position: relative;
+    top: 85vh;
+    visibility: hidden; 
+}
+@keyframes styleChange2{
+    to{
+        visibility: visible;
+        top: 100px;
+    }
+}
+.imgContainer{
+    border: 3px solid rgb(160, 151, 151);
+    height: 40vh;
+}
+.breakfast img{
+    width: 100%;
+    height: 40vh;
+    position: relative;
+    left: 0;
+    filter: brightness(40%);
+    z-index: 1;
+}
+.breakfast span{
+    color: white;
+    font-size: 2.19rem;
+    z-index: 2;
+    position: absolute;
+    left: 6px;
+}
+.indVeg{
+    position: relative;
+    margin: 10px 0;
+}
+.indVeg img{
+    width: 100%;
+    height: 40vh;
+    position: relative;
+    left: 0;
+    filter: brightness(40%);
+    z-index: 1;
+}
+.indVeg span{
+    color: white;
+    font-size: 2.19rem;
+    z-index: 2;
+    position: absolute;
+    left: 6px;
+}
+.mahaSpecial img{
+    width: 100%;
+    height: 40vh;
+    position: relative;
+    left: 0;
+    filter: brightness(40%);
+    z-index: 1;
+}
+.mahaSpecial span{
+    color: white;
+    font-size: 2.19rem;
+    z-index: 2;
+    position: absolute;
+    left: 6px;
+}
+.punjabSpecial{
+    position: relative;
+    margin: 10px 0;
+}
+.punjabSpecial img{
+    width: 100%;
+    height: 40vh;
+    position: relative;
+    left: 0;
+    filter: brightness(40%);
+    z-index: 1;
+}
+.punjabSpecial span{
+    color: white;
+    font-size: 2.19rem;
+    z-index: 2;
+    position: absolute;
+    left: 6px;
+}
+.fastFoods img{
+    width: 100%;
+    height: 40vh;
+    position: relative;
+    left: 0;
+    filter: brightness(40%);
+    z-index: 1;
+}
+.fastFoods span{
+    color: white;
+    font-size: 2.19rem;
+    z-index: 2;
+    position: absolute;
+    left: 6px;
+}
+.specialJuices{
+    margin: 10px 0;
+}
+.specialJuices img{
+    width: 100%;
+    height: 40vh;
+    position: relative;
+    left: 0;
+    filter: brightness(40%);
+    z-index: 1;
+}
+.specialJuices span{
+    color: white;
+    font-size: 2.19rem;
+    z-index: 2;
+    position: absolute;
+    left: 6px;
+}
+.footer{
+    filter: brightness(100%);
+    color: white;
+    margin-top: 90px;
+    padding: 10px 0;
+}
+.footContent1{
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+    padding: 10px 0;
+}
+.footContent2{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    bottom: 2px;
+}
+.footContent3{
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+}
+.footImages{
+    filter: brightness(100%);
+    display: flex;
+    position: relative;
+    bottom: 15px;
+    margin-top: 20px;
+    justify-content: center;
+}
+.footLogo{
+    padding: 0 4px;
+    height: 24px;
+    width: 24px;
+    border-radius: 50%;
+}
+.privacyAndTerms{
+    filter: brightness(100%);
+    color: white;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    bottom: 10px;
+    margin-top: 17px;
+    font-size: 0.81rem;
+}
+
+@media screen and (max-width: 1024px) {
+    .header{
+        background-color: black;
+    }
+    .menuIcon{
+        top: -1px;
+    }
+    .closeMenuIcon{
+        top: -1px;
+    }
+    .navItem{
+        padding: 12px 11px 20px 11px;
+        position: relative;
+        top: 3px;
+        left: 2%;
+    }
+    #loginLink, #logoutLink{
+        padding-right: 0;
+    }
+    .sidebarMenu{
+        width: 50vw;
+        height: fit-content;
+    }
+    .topHeading{
+        left: 0.5%;
+        margin-top: 3%;
+    }
+    .imgContainer{
+        height: 30vh;
+    }
+    .breakfast img{
+        height: 30vh;
+    }    
+    .indVeg img{
+        height: 30vh;
+    }    
+    .mahaSpecial img{
+        height: 30vh;
+    }    
+    .punjabSpecial img{
+        height: 30vh;
+    }    
+    .fastFoods img{
+        height: 30vh;
+    }    
+    .specialJuices img{
+        height: 30vh;
+    }    
+}

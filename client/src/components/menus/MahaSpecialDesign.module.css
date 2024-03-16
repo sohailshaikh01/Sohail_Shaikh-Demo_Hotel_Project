@@ -1,0 +1,440 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+.mahaSpecial{
+    background-color: black;
+}
+.header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    filter: brightness(100%);
+    background-color: black;
+    position: sticky;
+    top: 0;
+    z-index: 3;
+}
+.menuIcon:hover{
+    cursor: pointer;
+}
+.menuIcon{
+    position: relative;
+    left: 15px;
+    color: white;
+}
+.menuIconBar{
+    height: 4px;
+    width: 27px;
+    margin: 4px;
+    border-radius: 6px;
+    background-color: white;
+}
+.closeMenuIcon:hover{
+    cursor: pointer;
+}
+.closeMenuIcon{
+    filter:brightness(100%);
+    color: white;
+    font-size: 1.63rem;
+    font-weight: 500;
+}
+.sidebarMenu{
+    filter: brightness(100%);
+    height: 63vh;
+    width: 15vw;
+    color: white;
+    background-color: #343434;
+    text-align: center;
+    position: fixed;
+    border-radius: 20px;
+    z-index: 2;
+}
+.sidebarMenuItems span:hover{
+    cursor: pointer;
+}
+.sidebarMenuItems{
+    padding: 25px 0;
+    font-size: 0.94rem;
+    font-weight: 500;
+}
+hr{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width: 120px;
+    height: 1px;
+    border-radius: 2px;
+    background-color: white;
+}
+.nav{
+    font-size: 1rem;
+    justify-items: flex-end;
+    color: white;
+    position: relative;
+    right: 20px;
+    font-weight: 500;
+}
+.navItem:hover{
+    cursor: pointer;
+}
+.navItem{
+    display: inline-block;
+    padding: 10px 30px;
+}
+.section{
+    filter: brightness(100%);
+    color: white;
+    z-index: 1;
+}
+.topHeading{
+    display: flex;
+    position: relative;
+    top:42px;
+    justify-content: center;
+    padding: 10px 0;
+    font-size: 2.5rem;
+    letter-spacing: 8px;
+    text-shadow: 2px 1px 9px white;
+}
+.trackCartAlert{
+    position: absolute;
+    right:0;
+    filter: brightness(0%);
+    animation: disappear 6s linear 3s infinite alternate;
+}
+@keyframes disappear{
+    to{filter: brightness(100%);}
+}
+.arrowSymbol{
+    font-size: 3.75rem;
+    display: inline-block;
+    position: relative;
+    right: 17px;
+    bottom: 25px;
+    transform: rotate(220deg);
+}
+.trackCartAlertText{
+    display: inline-block;
+    position: relative;
+    font-size: 0.94rem;
+    top: 25px;
+    right: 80px;
+    height: 43px;
+    border-radius: 12px;
+    text-align: center;
+    width: 140px;
+    font-weight: 500;
+    background-color: rgb(214, 11, 11);
+}
+.mahaSpecialList{    
+    font-size: 2.19rem;
+}
+.mahaSpecialMenuItemImg{
+    height: 50vh;
+    width: 25vw;
+    border-radius: 25px;
+}
+.mahaSpecialMenuItem{
+    display: flex;
+    justify-content: space-between;
+}
+.mahaSpecialMenuItemDish{
+    font-size: 1.44rem;
+}
+.mahaSpecialMenuItemPrice{
+    font-size: 1.25rem;
+}
+.addButton{
+    display: block;
+    height: 35px;
+    width: 88px;
+    color: black;
+    font-size: 1.13rem;
+    font-weight: 500;
+    border-radius: 15px;
+    background-color: #ADD8E6;
+    position: relative;
+    top: 15px;
+}
+.addButton span{
+    display: inline-block;
+    padding: 5.2% 8%;
+}
+.addButton:hover{
+    cursor: default;
+}
+.mahaSpecialItemNumsAlert{
+    font-size: 1rem;
+    position: relative;
+    top: 25px;
+    visibility: visible;
+}
+.mahaSpecialItemCount{
+    position: relative;
+    visibility: visible;
+}
+.mahaSpecialItemCount div{
+    height: 27px;
+    width: 27px;
+    font-size: 1.56rem;
+    display: inline-block;
+    color: black;
+    position: relative;
+    top:20px;
+}
+.mahaSpecialItemCount span{
+    position: relative;
+    bottom: 5px;
+}
+.arithChar{
+    background-color: #FFFFF0;
+}
+.arithChar:hover{
+    cursor: default;
+}
+.itemCount{
+    background-color: rgba(250,249,246,0.88);
+}
+.itemCount:hover{
+    cursor: default;
+}
+.mahaSpecialRow1{
+    display: inline-block;
+    position: relative;
+    top: 90px;
+}
+.mahaSpecialRow2{
+    display: inline-block;
+    position: relative;
+    top: 150px;
+}
+.mahaSpecialRow3{
+    display: inline-block;
+    position: relative;
+    top: 210px;
+}
+.mahaSpecialMenuItem1{
+    display: inline-block;
+    padding: 0 50px;
+}
+.mahaSpecialMenuItem1 .mahaSpecialMenuItemImg{
+    background: url('../images/tambda.jpg');
+    background-size: cover;
+}
+.mahaSpecialMenuItem2{
+    display: inline-block;
+    padding: 0 50px;    
+}
+.mahaSpecialMenuItem2 .mahaSpecialMenuItemImg{
+    background: url('../images/pandhra.jpg');
+    background-size: cover;
+}
+.mahaSpecialMenuItem3{
+    display: inline-block;
+    padding: 0 50px;   
+}
+.mahaSpecialMenuItem3 .mahaSpecialMenuItemImg{
+    background: url('../images/chicken-rassa.jpg');
+    background-size: cover;
+}
+.mahaSpecialMenuItem4{
+    display: inline-block;
+    padding: 0 50px;    
+}
+.mahaSpecialMenuItem4 .mahaSpecialMenuItemImg{
+    background: url('../images/solkadhi.jpg');
+    background-size: cover;
+}
+.mahaSpecialMenuItem5{
+    display: inline-block;
+    padding: 0 50px;
+}
+.mahaSpecialMenuItem5 .mahaSpecialMenuItemImg{
+    background: url('../images/puranpoli.jpg');
+    background-size: cover;
+}
+.mahaSpecialMenuItem6{
+    display: inline-block;
+    padding: 0 50px;
+}
+.mahaSpecialMenuItem6 .mahaSpecialMenuItemImg{
+    background: url('../images/pithla.jpg');
+    background-size: cover;
+}
+.mahaSpecialMenuItem7{
+    display: inline-block;
+    padding: 0 50px;
+}
+.mahaSpecialMenuItem7 .mahaSpecialMenuItemImg{
+    background: url('../images/amti-dal.jpg');
+    background-size: cover;
+}
+.mahaSpecialMenuItem8{
+    display: inline-block;
+    padding: 0 50px;
+}
+.mahaSpecialMenuItem8 .mahaSpecialMenuItemImg{
+    background: url('../images/bharli-vangi.jpg');
+    background-size: cover;
+}
+.footer{
+    background-color: black;
+    filter: brightness(100%);
+    color: white;
+    padding: 60px 0 0 0;
+    position: relative;
+    top:240px;
+}
+.footContent1{
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+    padding: 10px 0;
+}
+.footContent2{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    bottom: 2px;
+}
+.footContent3{
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+}
+.footImages{
+    filter: brightness(100%);
+    display: flex;
+    position: relative;
+    bottom: 15px;
+    margin-top: 20px;
+    justify-content: center;
+}
+.footLogo{
+    padding: 0 4px;
+    height: 24px;
+    width: 24px;
+    border-radius: 50%;
+}
+.privacyAndTerms{
+    filter: brightness(100%);
+    color: white;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    bottom: 10px;
+    margin-top: 17px;
+    font-size: 0.81rem;
+}
+
+@media screen and (max-width: 1024px) {
+    .nav{
+        right: 0;
+        margin-top:1.5%;
+        align-self: flex-end;
+        width: fit-content;
+    }
+    .navItem{
+        font-size: 1rem;
+        color: white;
+        padding: 1% 7.5%;
+        display: inline-block;
+        width:fit-content;
+    }
+    #homepageLink, #cartLink, #loginLink{
+        font-size: 1rem;
+        padding: 1% 7.5%;
+        display: inline-block;
+        width:fit-content;
+    }
+    #homepageLink{
+        margin-left: -2%;
+    }
+    #cartLink{
+        margin-top: 7%;
+        margin-left: 25.6%;
+        padding-right: 7.6%;
+        position: relative;
+        left: 3.7%;
+    }
+    #loginLink{
+        width: 50px;
+        position: relative;
+        left: 2%;
+    }
+    .sidebarMenu{
+        width: 50vw;
+        height:fit-content;
+    }
+    .topHeading{
+        position: relative;
+        top: 95px;
+        left: 2%;
+    }
+    .trackCartAlert{
+        right:-15%;
+    }
+    .arrowSymbol{
+        margin-top: 9.7%;
+        position: relative;
+        left: -19%;
+        font-size: 2rem;
+    }
+    .trackCartAlertText{
+        position: relative;
+        top: 18px;
+        left: -40%;
+    }
+    .mahaSpecialMenuItemImg{
+        height: 30vh;
+        width: 70vw;
+    }
+    .mahaSpecialMenuItemDish{
+        font-size: 1.25rem;
+    }    
+    .mahaSpecialMenuItemPrice{
+        font-size: 1rem;
+    }
+    .addButton{
+        height: 36px;
+    }
+    .addButton span{
+        padding: 5.1% 8%;
+    }
+    .mahaSpecialRow1{
+        position: relative;
+        top: 0;
+    }
+    .mahaSpecialRow2{
+        position: relative;
+        top: 0;
+    }
+    .mahaSpecialRow3{
+        position: relative;
+        top: 0;
+    }
+    .mahaSpecialMenuItem1{
+        margin-top: 39%;
+    }
+    .mahaSpecialMenuItem2{
+        display: inline-block;
+        padding: 15% 0;
+    }
+    .mahaSpecialMenuItem4{
+        display: inline-block;
+        padding: 15% 0;
+    }
+    .mahaSpecialMenuItem6{
+        display: inline-block;
+        padding: 15% 0;
+    }
+    .mahaSpecialMenuItem8{
+        display: inline-block;
+        padding-top: 15%;
+    }
+    .footer{
+        top: -4px;
+        margin-top: 6%;
+    }
+}

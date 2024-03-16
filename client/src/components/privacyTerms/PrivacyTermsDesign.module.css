@@ -1,0 +1,195 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+.privacyTerms::before{
+    content: " ";
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: url("../images/homepage_bg.jpg");
+    background-size: cover;
+    filter: brightness(15%);
+}
+.header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    filter: brightness(100%);
+    background-color: black;
+    position: sticky;
+    top: 0;
+    z-index: 3;
+}
+.menuIcon:hover{
+    cursor: pointer;
+}
+.menuIcon{
+    position: relative;
+    left: 15px;
+    color: white;
+}
+.menuIconBar{
+    height:4px;
+    width: 27px;
+    margin: 4px;
+    border-radius: 6px;
+    background-color: white;
+}
+.closeMenuIcon:hover{
+    cursor: pointer;
+}
+.closeMenuIcon{
+    filter:brightness(100%);
+    color: white;
+    font-size: 1.63rem;
+    font-weight: 500;
+}
+.sidebarMenu{
+    filter: brightness(100%);
+    height: 63vh;
+    width: 15vw;
+    color: white;
+    background-color: #343434;
+    text-align: center;
+    position: fixed;
+    border-radius: 20px;
+    z-index: 2;
+}
+.sidebarMenuItems span:hover{
+    cursor: pointer;
+}
+.sidebarMenuItems{
+    padding: 25px 0;
+    font-size: 0.94rem;
+    font-weight: 500;
+}
+hr{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width: 120px;
+    height: 1px;
+    border-radius: 2px;
+    background-color: white;
+}
+.nav{
+    font-size: 1rem;
+    justify-items: flex-end;
+    color: white;
+    position: relative;
+    right: 20px;
+    font-weight: 500;
+}
+.navItem:hover{
+    cursor: pointer;
+}
+.navItem{
+    display: inline-block;
+    padding: 10px 30px;
+    color: white;
+}
+.section{
+    color: white;
+    filter: brightness(100%);
+    margin-top: 2.5%;
+    z-index: 1;
+}
+.section p{
+    font-size: 1.06rem;
+    text-indent: 1.7%;
+}
+.section li{
+    padding: 1% 0;
+}
+.privacyPolicy{
+    margin-top: 3.2%;
+}
+.footer{
+    filter: brightness(100%);
+    color: white;
+    margin-top: 4%;
+}
+.footContent1{
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+}
+.footContent2{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    bottom: 2px;
+}
+.footContent3{
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+}
+.footImages{
+    filter: brightness(100%);
+    display: flex;
+    position: relative;
+    bottom: 15px;
+    margin-top: 20px;
+    justify-content: center;
+}
+.footLogo{
+    padding: 0 4px;
+    height: 24px;
+    width: 24px;
+    border-radius: 50%;
+}
+
+@media screen and (max-width: 1024px) {
+    html, body{
+        overflow-x: clip;
+    }
+    .nav{
+        right: 0;
+        margin-top:1.5%;
+        align-self: flex-end;
+        width: fit-content;
+    }
+    .navItem{
+        font-size: 1rem;
+        color: white;
+        padding: 1% 7.5%;
+        display: inline-block;
+        width:fit-content;
+    }
+    #homepageLink, #cartLink, #loginLink{
+        font-size: 1rem;
+        padding: 1% 7.5%;
+        display: inline-block;
+        width:fit-content;
+    }
+    #homepageLink{
+        margin-left: -2%;
+    }
+    #cartLink{
+        margin-top: 7%;
+        margin-left: 25.6%;
+        padding-right: 7.6%;
+        position: relative;
+        left: 3.7%;
+    }
+    #loginLink{
+        width: 50px;
+        position: relative;
+        left: 2%;
+    }
+    .sidebarMenu{
+        width: 50vw;
+        height:fit-content;
+    }
+    .section{
+        margin-top: 8%;
+        padding: 0 6% 0 5%;
+    }
+    .footer{
+        margin-top: 10%;
+    }
+}

@@ -1,0 +1,448 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+.punjabSpecial{
+    background-color: black;
+}
+.header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    filter: brightness(100%);
+    background-color: black;
+    position: sticky;
+    top: 0;
+    z-index: 3;
+}
+.menuIcon:hover{
+    cursor: pointer;
+}
+.menuIcon{
+    position: relative;
+    left: 15px;
+    color: white;
+}
+.menuIconBar{
+    height:4px;
+    width: 27px;
+    margin: 4px;
+    border-radius: 6px;
+    background-color: white;
+}
+.closeMenuIcon:hover{
+    cursor: pointer;
+}
+.closeMenuIcon{
+    filter:brightness(100%);
+    color: white;
+    font-size: 1.63rem;
+    font-weight: 500;
+}
+.sidebarMenu{
+    filter: brightness(100%);
+    height: 63vh;
+    width: 15vw;
+    color: white;
+    background-color: #343434;
+    text-align: center;
+    position: fixed;
+    border-radius: 20px;
+    z-index: 2;
+}
+.sidebarMenuItems span:hover{
+    cursor: pointer;
+}
+.sidebarMenuItems{
+    padding: 25px 0;
+    font-size: 0.94rem;
+    font-weight: 500;
+}
+hr{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width: 120px;
+    height: 1px;
+    border-radius: 2px;
+    background-color: white;
+}
+.nav{
+    font-size: 1rem;
+    justify-items: flex-end;
+    color: white;
+    position: relative;
+    right: 20px;
+    font-weight: 500;
+}
+.navItem:hover{
+    cursor: pointer;
+}
+.navItem{
+    display: inline-block;
+    padding: 10px 30px;
+}
+.section{
+    filter: brightness(100%);
+    color: white;
+    z-index: 1;
+}
+.topHeading{
+    display: flex;
+    position: relative;
+    top:42px;
+    justify-content: center;
+    padding: 10px 0;
+    font-size: 2.5rem;
+    letter-spacing: 8px;
+    text-shadow: 2px 1px 9px white;
+}
+.trackCartAlert{
+    position: absolute;
+    right:0;
+    filter: brightness(0%);
+    animation: disappear 6s linear 3s infinite alternate;
+}
+@keyframes disappear{
+    to{filter: brightness(100%);}
+}
+.arrowSymbol{
+    font-size: 3.75rem;
+    display: inline-block;
+    position: relative;
+    right: 17px;
+    bottom: 25px;
+    transform: rotate(220deg);
+}
+.trackCartAlertText{
+    display: inline-block;
+    position: relative;
+    font-size: 0.94rem;
+    top: 25px;
+    right: 80px;
+    height: 43px;
+    border-radius: 12px;
+    text-align: center;
+    width: 140px;
+    font-weight: 500;
+    background-color: rgb(214, 11, 11);
+}
+.punjabSpecialList{    
+    font-size: 2.19rem;
+}
+.punjabSpecialMenuItemImg{
+    height: 50vh;
+    width: 25vw;
+    border-radius: 25px;
+}
+.punjabSpecialMenuItem{
+    display: flex;
+    justify-content: space-between;
+}
+.punjabSpecialMenuItemDish{
+    font-size: 1.44rem;
+}
+.punjabSpecialMenuItemPrice{
+    font-size: 1.25rem;
+}
+.addButton{
+    display: block;
+    height: 35px;
+    width: 88px;
+    color: black;
+    font-size: 1.13rem;
+    font-weight: 500;
+    border-radius: 15px;
+    background-color: #ADD8E6;
+    position: relative;
+    top: 15px;
+}
+.addButton span{
+    display: inline-block;
+    padding: 5.2% 8%;
+}
+.addButton:hover{
+    cursor: default;
+}
+.punjabSpecialItemNumsAlert{
+    font-size: 1rem;
+    position: relative;
+    top: 25px;
+    visibility: visible;
+}
+.punjabSpecialItemCount{
+    position: relative;
+    visibility: visible;
+}
+.punjabSpecialItemCount div{
+    height: 27px;
+    width: 27px;
+    font-size: 1.56rem;
+    display: inline-block;
+    color: black;
+    position: relative;
+    top:20px;
+}
+.punjabSpecialItemCount span{
+    position: relative;
+    bottom: 5px;
+}
+.arithChar{
+    background-color: #FFFFF0;
+}
+.arithChar:hover{
+    cursor: default;
+}
+.itemCount{
+    background-color: rgba(250,249,246,0.88);
+}
+.itemCount:hover{
+    cursor: default;
+}
+.punjabSpecialRow1{
+    display: inline-block;
+    position: relative;
+    top: 90px;
+}
+.punjabSpecialRow2{
+    display: inline-block;
+    position: relative;
+    top: 150px;
+}
+.punjabSpecialRow3{
+    display: inline-block;
+    position: relative;
+    top: 210px;
+}
+.punjabSpecialMenuItem1{
+    display: inline-block;
+    padding: 0 50px;
+}
+.punjabSpecialMenuItem1 .punjabSpecialMenuItemImg{
+    background: url('../images/butter-chicken.jpg');
+    background-size: cover;
+}
+.punjabSpecialMenuItem2{
+    display: inline-block;
+    padding: 0 50px;    
+}
+.punjabSpecialMenuItem2 .punjabSpecialMenuItemImg{
+    background: url('../images/rajma-masala.jpg');
+    background-size: cover;
+}
+.punjabSpecialMenuItem3{
+    display: inline-block;
+    padding: 0 50px;   
+}
+.punjabSpecialMenuItem3 .punjabSpecialMenuItemImg{
+    background: url('../images/paratha.jpg');
+    background-size: cover;
+}
+.punjabSpecialMenuItem4{
+    display: inline-block;
+    padding: 0 50px;    
+}
+.punjabSpecialMenuItem4 .punjabSpecialMenuItemImg{
+    background: url('../images/dal-makhani.jpg');
+    background-size: cover;
+}
+.punjabSpecialMenuItem5{
+    display: inline-block;
+    padding: 0 50px;
+}
+.punjabSpecialMenuItem5 .punjabSpecialMenuItemImg{
+    background: url('../images/lassi.jpg');
+    background-size: cover;
+}
+.punjabSpecialMenuItem6{
+    display: inline-block;
+    padding: 0 50px;
+}
+.punjabSpecialMenuItem6 .punjabSpecialMenuItemImg{
+    background: url('../images/sarson-da-saag.jpg');
+    background-size: cover;
+}
+.punjabSpecialMenuItem7{
+    display: inline-block;
+    padding: 0 50px;
+}
+.punjabSpecialMenuItem7 .punjabSpecialMenuItemImg{
+    background: url('../images/makki-di-roti.jpg');
+    background-size: cover;
+}
+.punjabSpecialMenuItem8{
+    display: inline-block;
+    padding: 0 50px;
+}
+.punjabSpecialMenuItem8 .punjabSpecialMenuItemImg{
+    background: url('../images/matar-paneer.jpg');
+    background-size: cover;
+}
+.punjabSpecialMenuItem9{
+    display: inline-block;
+    padding: 0 50px;
+}
+.punjabSpecialMenuItem9 .punjabSpecialMenuItemImg{
+    background: url('../images/pinni.jpg');
+    background-size: cover;
+}
+.footer{
+    background-color: black;
+    filter: brightness(100%);
+    color: white;
+    padding: 60px 0 0 0;
+    position: relative;
+    top: 240px;
+}
+.footContent1{
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+    padding: 10px 0;
+}
+.footContent2{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    bottom: 2px;
+}
+.footContent3{
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+}
+.footImages{
+    filter: brightness(100%);
+    display: flex;
+    position: relative;
+    bottom: 15px;
+    margin-top: 20px;
+    justify-content: center;
+}
+.footLogo{
+    padding: 0 4px;
+    height: 24px;
+    width: 24px;
+    border-radius: 50%;
+}
+.privacyAndTerms{
+    filter: brightness(100%);
+    color: white;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    bottom: 10px;
+    margin-top: 17px;
+    font-size: 0.81rem;
+}
+
+@media screen and (max-width: 1024px) {
+    .nav{
+        right: 0;
+        margin-top:1.5%;
+        align-self: flex-end;
+        width: fit-content;
+    }
+    .navItem{
+        font-size: 1rem;
+        color: white;
+        padding: 1% 7.5%;
+        display: inline-block;
+        width:fit-content;
+    }
+    #homepageLink, #cartLink, #loginLink{
+        font-size: 1rem;
+        padding: 1% 7.5%;
+        display: inline-block;
+        width:fit-content;
+    }
+    #homepageLink{
+        margin-left: -2%;
+    }
+    #cartLink{
+        margin-top: 7%;
+        margin-left: 25.6%;
+        padding-right: 7.6%;
+        position: relative;
+        left: 3.7%;
+    }
+    #loginLink{
+        width: 50px;
+        position: relative;
+        left: 2%;
+    }
+    .sidebarMenu{
+        width: 50vw;
+        height:fit-content;
+    }
+    .topHeading{
+        position: relative;
+        top: 95px;
+        left: 2%;
+    }
+    .trackCartAlert{
+        right:-15%;
+    }
+    .arrowSymbol{
+        margin-top: 9.7%;
+        position: relative;
+        left: -19%;
+        font-size: 2rem;
+    }
+    .trackCartAlertText{
+        position: relative;
+        top: 18px;
+        left: -40%;
+    }
+    .punjabSpecialMenuItemImg{
+        height: 30vh;
+        width: 70vw;
+    }
+    .punjabSpecialMenuItemDish{
+        font-size: 1.25rem;
+    }    
+    .punjabSpecialMenuItemPrice{
+        font-size: 1rem;
+    }
+    .addButton{
+        height: 36px;
+    }
+    .addButton span{
+        padding: 5.1% 8%;
+    }
+    .punjabSpecialRow1{
+        position: relative;
+        top: 0;
+    }
+    .punjabSpecialRow2{
+        position: relative;
+        top: 0;
+    }
+    .punjabSpecialRow3{
+        position: relative;
+        top: 0;
+    }
+    .punjabSpecialMenuItem1{
+        margin-top: 39%;
+    }
+    .punjabSpecialMenuItem2{
+        display: inline-block;
+        padding: 15% 0;
+    }
+    .punjabSpecialMenuItem4{
+        display: inline-block;
+        padding: 15% 0;
+    }
+    .punjabSpecialMenuItem6{
+        display: inline-block;
+        padding: 15% 0;
+    }
+    .punjabSpecialMenuItem8{
+        display: inline-block;
+        padding: 15% 0;
+    }
+    .footer{
+        top: -4px;
+        margin-top: 6%;
+    }
+}

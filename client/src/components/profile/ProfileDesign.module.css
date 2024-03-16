@@ -1,0 +1,323 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+.profile::before{
+    content: " ";
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: url("../images/homepage_bg.jpg");
+    background-size: cover;
+    filter: brightness(12%);
+}
+.header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    filter: brightness(100%);
+    background-color: black;
+    position: sticky;
+    top: 0;
+    z-index: 3;
+}
+.menuIcon:hover{
+    cursor: pointer;
+}
+.menuIcon{
+    position: relative;
+    left: 15px;
+    color: white;
+}
+.menuIconBar{
+    height:4px;
+    width: 27px;
+    margin: 4px;
+    border-radius: 6px;
+    background-color: white;
+}
+.closeMenuIcon:hover{
+    cursor: pointer;
+}
+.closeMenuIcon{
+    filter:brightness(100%);
+    color: white;
+    font-size: 1.63rem;
+    font-weight: 500;
+}
+.sidebarMenu{
+    filter: brightness(100%);
+    height: 63vh;
+    width: 15vw;
+    color: white;
+    background-color: #343434;
+    text-align: center;
+    position: fixed;
+    border-radius: 20px;
+    z-index: 2;
+}
+.sidebarMenuItems{
+    padding: 25px 0;
+    font-size: 0.94rem;
+    font-weight: 500;
+}
+hr{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width: 120px;
+    height: 1px;
+    border-radius: 2px;
+    background-color: white;
+}
+.nav{
+    font-size: 1rem;
+    justify-items: flex-end;
+    color: white;
+    position: relative;
+    right: 20px;
+    font-weight: 500;
+}
+.navItem:hover{
+    cursor: pointer;
+}
+.navItem{
+    display: inline-block;
+    padding: 10px 30px;
+    color: white;
+}
+.section{
+    filter: brightness(100%);
+    color: white;
+    z-index: 1;
+
+}
+.topHeading{
+    display: flex;
+    position: relative;
+    top:42px;
+    justify-content: center;
+    font-size: 2.19rem;
+    font-weight: bold;
+    padding: 10px 0;
+    margin-bottom: 4%;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    position: relative;
+    top:50px;
+} 
+legend{
+    font-size: 1.06rem;
+    position: relative;
+}
+fieldset{
+    width: 47vw;
+    border-radius: 10px;
+    color: rgb(8, 219, 209);
+    font-weight: bold;
+}
+.name{
+    height: 3vh;
+    width: 45vw;
+    background: none;
+    color: white;
+    position: relative;
+    right: 2.7%;
+    margin: 0;
+    padding: 2.5% 0 2.5% 1.7%;
+    font-size: 1.19rem;
+    border: none;
+    outline: none;
+}
+.address{
+    height: 10vh;
+    width: 45vw;
+    background: none;
+    color: white;
+    position: relative;
+    right: 2.7%;
+    margin: 0;
+    padding: 2% 0 6% 1.3%;
+    font-size: 1.19rem;
+    font-family: Arial, Helvetica, sans-serif;
+    border: none;
+    outline: none;
+    overflow: hidden;
+    resize: none;
+}
+.mandatory{
+    display: inline;
+    font-size: 1.56rem;
+    color: red;
+    position: relative;
+    top: 43px;
+    left: 23.7%;
+}
+.editName{
+    position: relative;
+    top: 6px;
+    left: 23%;
+}
+.editAddress{
+    position: relative;
+    top: 6px;
+    left: 23%;
+}
+.editPassword{
+    color: white;
+    text-decoration: underline;
+    position: relative;
+    top: 30px;
+    right: 21.2%;
+}
+.saveBtn{
+    border: none;
+    background-color: white;
+    padding: 1px 4px 0 4px;
+    height: 6vh;
+    width: 7%;
+    font-size: 1.19rem;
+    color: black;
+    border-radius: 19px;
+    position: relative;
+    top: 51px;
+    left: 21.3%;
+}
+.footer{
+    filter: brightness(100%);
+    color: white;
+    position: relative;
+    margin-top: 8%;
+}
+.footContent1{
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+}
+.footContent2{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    bottom: 2px;
+}
+.footContent3{
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+}
+.footImages{
+    filter: brightness(100%);
+    display: flex;
+    position: relative;
+    bottom: 15px;
+    margin-top: 20px;
+    justify-content: center;
+}
+.footLogo{
+    padding: 0 4px;
+    height: 24px;
+    width: 24px;
+    border-radius: 50%;
+}
+.privacyAndTerms{
+    filter: brightness(100%);
+    color: white;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    bottom: 10px;
+    margin-top: 19px;
+    font-size: 0.81rem;
+}
+
+@media screen and (max-width: 1024px) {
+    .nav{
+        right: 0;
+        margin-top:1.5%;
+        align-self: flex-end;
+        width: fit-content;
+    }
+    .navItem{
+        font-size: 1rem;
+        color: white;
+        padding: 1% 7.5%;
+        display: inline-block;
+        width:fit-content;
+    }
+    #homepageLink, #cartLink, #loginLink{
+        font-size: 1rem;
+        padding: 1% 7.5%;
+        display: inline-block;
+        width:fit-content;
+    }
+    #homepageLink{
+        margin-left: -2%;
+    }
+    #cartLink{
+        margin-top: 7%;
+        margin-left: 25.6%;
+        padding-right: 7.6%;
+        position: relative;
+        left: 3.7%;
+    }
+    #loginLink{
+        width: 50px;
+        position: relative;
+        left: 2%;
+    }
+    .sidebarMenu{
+        width: 50vw;
+        height:fit-content;
+    }
+    .topHeading{
+        margin-bottom: 19%;
+    }
+    fieldset{
+        width: 65vw;
+        padding: 0, 10%;
+    }
+    .name{
+        width: 62vw;
+        padding: 2.5% 0 2.8% 1.7%;
+    }
+    .address{
+        width: 62vw;
+        padding: 2.5% 0 6% 1.3%;
+        position: relative;
+        right: 2.5%; 
+        color: white;
+    }
+    .mandatory{
+        top: 42px;
+        left: 32.5%;
+    } 
+    .editName{
+        position: relative;
+        top: 5px;
+        left: 30%;
+    } 
+    .editAddress{
+        top: 5px;
+        left: 30%;
+    }
+    .editPassword{
+        position: relative;
+        top: 30px;
+        right: 24%;
+    }
+    .saveBtn{
+        width: 20%;
+        height: 11vw;
+        border-radius: 30px;
+        position: relative;
+        left: 25.6%;
+    }
+    .footer{
+        margin-top: 27%;
+    }
+}

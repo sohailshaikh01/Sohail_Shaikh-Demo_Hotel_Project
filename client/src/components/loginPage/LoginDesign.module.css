@@ -1,0 +1,269 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+.login::before{
+    content: " ";
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: url("../images/homepage_bg.jpg");
+    background-size: cover;
+    filter: brightness(12%);
+}
+.header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    filter: brightness(100%);
+    background-color: black;
+    position: sticky;
+    top: 0;
+    z-index: 3;
+}
+.menuIcon:hover{
+    cursor: pointer;
+}
+.menuIcon{
+    position: relative;
+    left: 15px;
+    color: white;
+}
+.menuIconBar{
+    height: 4px;
+    width: 27px;
+    margin: 4px;
+    border-radius: 6px;
+    background-color: white;
+}
+.closeMenuIcon:hover{
+    cursor: pointer;
+}
+.closeMenuIcon{
+    filter: brightness(100%);
+    position: relative;
+    color: white;
+    font-size: 1.63rem;
+    font-weight: 500;
+}
+.sidebarMenu{
+    filter: brightness(100%);
+    height: 63vh;
+    width: 15vw;
+    color: white;
+    background-color: #343434;
+    text-align: center;
+    position: fixed;
+    border-radius: 20px;
+    z-index: 2;
+}
+.sidebarMenuItems span:hover{
+    cursor: pointer;
+}
+.sidebarMenuItems{
+    padding: 25px 0;
+    font-size: 0.94rem;
+    font-weight: 500;
+}
+hr{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width: 120px;
+    height: 1px;
+    border-radius: 2px;
+    background-color: white;
+}
+.nav{
+    font-size: 1rem;
+    justify-items: flex-end;
+    color: white;
+    position: relative;
+    right: 20px;
+    font-weight: 500;
+}
+.navItem:hover{
+    cursor: pointer;
+}
+.navItem{
+    display: inline-block;
+    padding: 10px 30px;
+    color: white;
+}
+.section{
+    filter: brightness(100%);
+    color: white;
+    z-index: 1;
+}
+.loginSuccess{
+    position: absolute;
+    top: 2.6%;
+    left: 43.2vw;
+    background-color: rgb(12, 235, 60);
+    color: rgb(52, 60, 65);
+    width: 12vw;
+    height: 3.9vh;
+    border-radius: 20px;
+    display: none;
+}
+.topHeading{
+    display: flex;
+    position: relative;
+    top: 42px;
+    justify-content: center;
+    font-size: 2.5rem;
+    padding: 10px 0;
+    letter-spacing: 8px;
+    text-shadow: 2px 1px 9px white;
+} 
+.form{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    position: relative;
+    top: 50px;
+} 
+.username, .password{
+    background-color: rgba(0, 0, 0, 0);
+    border: 1px solid white;
+    color: white;
+    border-radius: 30px;
+    margin-top: 53px;
+    padding: 2.5% 0 2.3% 1.7%;
+    font-size: 1.13rem;
+}  
+.signIn{
+    background-color: white;
+    border: none;
+    padding: 1px 4px 0 4px;
+    margin-top: 53px;
+    height: 6vh;
+    width: 20%;
+    font-size: 1.19rem;
+    color: black;
+    border-radius: 20px;
+}
+.signUpAlert{
+    font-size: 1.19rem;
+    font-weight: 500;
+    position: relative;
+    top:35px;
+    letter-spacing: 0.4px;
+    word-spacing: 2px;
+}
+.signUp{
+    background-color: white;
+    border: none;
+    padding: 1px 4px 0 4px;
+    margin-top: 53px;
+    height: 6vh;
+    width: 20%;
+    font-size: 1.19rem;
+    color: black;
+    border-radius: 20px;
+    position: relative;
+    bottom: 9px;
+}
+.footer{
+    filter: brightness(100%);
+    color: white;
+    position: relative;
+    margin-top: 5.12%;
+}
+.footContent1{
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+}
+.footContent2{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    bottom: 2px;
+}
+.footContent3{
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+}
+.footImages{
+    filter: brightness(100%);
+    display: flex;
+    position: relative;
+    bottom: 15px;
+    margin-top: 20px;
+    justify-content: center;
+}
+.footLogo{
+    padding: 0 4px;
+    height: 24px;
+    width: 24px;
+    border-radius: 50%;
+}
+.privacyAndTerms{
+    filter: brightness(100%);
+    color: white;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    bottom: 10px;
+    margin-top: 19px;
+    font-size: 0.81rem;
+}
+
+@media screen and (max-width: 1024px) {
+    .menuIcon{
+        top: -1px;
+    }
+    .closeMenuIcon{
+        top: -1px;
+    }
+    .navItem{
+        padding: 12px 11px 20px 11px;
+        position: relative;
+        top: 3px;
+        left: 2%;
+    }
+    #aboutLink{
+        padding-right: 0;
+    }
+    .sidebarMenu{
+        width: 50vw;
+        height: fit-content;
+    }
+    .loginSuccess{
+        width: 44%;
+        height: 24px;
+        top: 2.5%;
+        left: 28%;
+    }
+    .topHeading{
+        left: 0.5%;
+    }
+    .form{
+        display: flex;
+        align-items: center;
+    }
+    .username, .password{
+        padding: 3% 1% 2.3% 3.5%;
+        width: 70vw;
+        height: 5vh;
+    }
+    .password{
+        margin-top: 20%;
+    }
+    .signIn, .signUp{
+        width: 40%;
+        height: 11vw;
+        border-radius: 25px;
+        padding: 0;
+    }
+    .signUpAlert{
+        font-size: 1.13rem;
+    }
+    .footer{
+        margin-top: 26%;
+    }
+}    

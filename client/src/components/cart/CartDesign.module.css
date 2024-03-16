@@ -1,0 +1,265 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+.cart::before{
+    content: " ";
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: url("../images/homepage_bg.jpg");
+    background-size: cover;
+    filter: brightness(15%);
+}
+.header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    filter: brightness(100%);
+    background-color: black;
+    position: sticky;
+    top: 0;
+    z-index: 3;
+}
+.menuIcon:hover{
+    cursor: pointer;
+}
+.menuIcon{
+    position: relative;
+    left: 15px;
+    color: white;
+}
+.menuIconBar{
+    height:4px;
+    width: 27px;
+    margin: 4px;
+    border-radius: 6px;
+    background-color: white;
+}
+.closeMenuIcon:hover{
+    cursor: pointer;
+}
+.closeMenuIcon{
+    filter:brightness(100%);
+    color: white;
+    font-size: 1.63rem;
+    font-weight: 500;
+}
+.sidebarMenu{
+    filter: brightness(100%);
+    height: 63vh;
+    width: 15vw;
+    color: white;
+    background-color: #343434;
+    text-align: center;
+    position: fixed;
+    border-radius: 20px;
+    z-index: 2;
+}
+.sidebarMenuItems{
+    padding: 25px 0;
+    font-size: 0.94rem;
+    font-weight: 500;
+}
+hr{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width: 120px;
+    height: 1px;
+    border-radius: 2px;
+    background-color: white;
+}
+.nav{
+    font-size: 1rem;
+    justify-items: flex-end;
+    color: white;
+    position: relative;
+    right: 20px;
+    font-weight: 500;
+}
+.navItem:hover{
+    cursor: pointer;
+}
+.navItem{
+    display: inline-block;
+    padding: 10px 30px;
+    color: white;
+}
+.section{
+    filter: brightness(100%);
+    color: white;
+}
+.emptyCartText{
+    text-align: center;
+    padding: 10.5% 0;
+    font-size: 1.63rem;
+    font-weight: bold;
+}
+.cartTable1{
+    border-collapse: collapse;
+    width: 50%;
+    background-color: rgb(255,0,255);
+    font-size: 1.13rem;
+    text-align: center;
+    margin-top: 3%;
+}
+.cartTable1 th{
+    color: white;
+    height: 7vh;
+}
+.cartTable1 td{
+    color: white;
+    height: 7vh;
+}
+.midCol{
+    background-color: rgba(230, 123, 230, 0.87);
+}
+.cartTable2{
+    width: 50%;
+    border-collapse: collapse;
+    margin-top: 2%;
+}
+.cartTotalAmount{
+    position: relative;
+    top: -20px;
+    font-size: 1.06rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+.reset{
+    position: relative;
+    left: 4%;
+}
+.button{
+    background-color: white;
+    border: none;
+    width: 9vw;
+    height: 5vh;
+    border-radius: 25px;
+    font-size: 1.01rem;
+}
+.note{
+    text-align: center;
+    margin-top: 5.5%;
+}
+.note p{
+    font-size: 1rem;
+}
+.footer{
+    filter: brightness(100%);
+    color: white;
+    margin-top: 5%;
+}
+.footContent1{
+    display: flex;
+    justify-content: center;
+    margin-top: 75px;
+    padding: 10px 0;
+}
+.footContent2{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    bottom: 2px;
+}
+.footContent3{
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+}
+.footImages{
+    filter: brightness(100%);
+    display: flex;
+    position: relative;
+    bottom: 15px;
+    margin-top: 20px;
+    justify-content: center;
+}
+.footLogo{
+    padding: 0 4px;
+    height: 24px;
+    width: 24px;
+    border-radius: 50%;
+}
+.privacyAndTerms{
+    filter: brightness(100%);
+    color: white;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    bottom: 10px;
+    margin-top: 19px;
+    font-size: 0.81rem;
+}
+
+@media screen and (max-width: 1024px) {
+    .nav{
+        right: 0;
+        margin-top:1.5%;
+        align-self: flex-end;
+        width: fit-content;
+    }
+    .navItem{
+        font-size: 1rem;
+        color: white;
+        padding: 1% 7.5%;
+        display: inline-block;
+        width:fit-content;
+    }
+    #homepageLink, #orderLink{
+        font-size: 1rem;
+        padding: 1% 7.5%;
+        display: inline-block;
+        width:fit-content;
+    }
+    #homepageLink{
+        margin-left: -2%;
+    }
+    #orderLink{
+        margin-top: 7%;
+        margin-left: 18.5%;
+        padding-right: 9.5%;
+        position: relative;
+        left: 3.7%;
+    }
+    .sidebarMenu{
+        width: 50vw;
+        height:fit-content;
+    }
+    .cartTable1{
+        margin-top: 9.5%;
+    }
+    .cartTable2{
+        margin-top: 6%;
+    }
+    .cartTotalAmount{
+        left: 40.5%;
+        display: inline-block;
+        width: 48vw;
+        font-size: 1.06rem;
+    }
+    .reset{
+        left: -3%;
+    }
+    .button{
+        position: relative;
+        top: 50px;
+        right: 115%;
+        width: 20vw;
+        height: 46px;
+        border-radius: 25px;
+        font-size: 1.01rem;
+    }
+    .note{
+        position: relative;
+        top: 10px;
+        margin-top: 25%;
+        padding: 0 4%;
+    }
+    .footer{
+        margin-top: -5%;
+    }
+}
