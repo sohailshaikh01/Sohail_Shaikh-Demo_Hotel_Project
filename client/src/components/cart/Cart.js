@@ -273,10 +273,10 @@ const Cart = () => {
         <div className={cartDesign.footContent3}>Follow On</div>
 
         <div className={cartDesign.footImages}>
-          <a href={socialHandles.linkedin} target='_blank'><img className={cartDesign.footLogo} src={linkedinImg} alt='LinkedIn Logo' /></a>
-          <a href={socialHandles.facebook} target='_blank'><img className={cartDesign.footLogo} src={facebookImg} alt='Facebook Logo' /></a>
-          <a href={socialHandles.instagram} target='_blank'><img className={cartDesign.footLogo} src={instagramImg} alt='Instagram Logo' /></a>
-          <a href={socialHandles.twitter} target='_blank'><img className={cartDesign.footLogo} src={twitterImg} alt='Twitter Logo' /></a>
+          <a href={socialHandles.linkedin} target='_blank' rel='noopener noreferrer'><img className={cartDesign.footLogo} src={linkedinImg} alt='LinkedIn Logo' /></a>
+          <a href={socialHandles.facebook} target='_blank' rel='noopener noreferrer'><img className={cartDesign.footLogo} src={facebookImg} alt='Facebook Logo' /></a>
+          <a href={socialHandles.instagram} target='_blank' rel='noopener noreferrer'><img className={cartDesign.footLogo} src={instagramImg} alt='Instagram Logo' /></a>
+          <a href={socialHandles.twitter} target='_blank' rel='noopener noreferrer'><img className={cartDesign.footLogo} src={twitterImg} alt='Twitter Logo' /></a>
         </div>
 
         <Link to='/privacy-terms'><div className={cartDesign.privacyAndTerms}>Privacy Policy · Terms & Conditions</div></Link>

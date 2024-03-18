@@ -255,10 +255,10 @@ const SignUp = () => {
         <div className={signUpDesign.footContent3}>Follow On</div>
 
         <div className={signUpDesign.footImages}>
-          <a href={socialHandles.linkedin} target='_blank'><img className={signUpDesign.footLogo} src={linkedinImg} alt='LinkedIn Logo' /></a>
-          <a href={socialHandles.facebook} target='_blank'><img className={signUpDesign.footLogo} src={facebookImg} alt='Facebook Logo' /></a>
-          <a href={socialHandles.instagram} target='_blank'><img className={signUpDesign.footLogo} src={instagramImg} alt='Instagram Logo' /></a>
-          <a href={socialHandles.twitter} target='_blank'><img className={signUpDesign.footLogo} src={twitterImg} alt='Twitter Logo' /></a>
+          <a href={socialHandles.linkedin} target='_blank' rel='noopener noreferrer'><img className={signUpDesign.footLogo} src={linkedinImg} alt='LinkedIn Logo' /></a>
+          <a href={socialHandles.facebook} target='_blank' rel='noopener noreferrer'><img className={signUpDesign.footLogo} src={facebookImg} alt='Facebook Logo' /></a>
+          <a href={socialHandles.instagram} target='_blank' rel='noopener noreferrer'><img className={signUpDesign.footLogo} src={instagramImg} alt='Instagram Logo' /></a>
+          <a href={socialHandles.twitter} target='_blank' rel='noopener noreferrer'><img className={signUpDesign.footLogo} src={twitterImg} alt='Twitter Logo' /></a>
         </div> 
 
         <Link to='/privacy-terms'><div className={signUpDesign.privacyAndTerms}>Privacy Policy · Terms & Conditions</div></Link>

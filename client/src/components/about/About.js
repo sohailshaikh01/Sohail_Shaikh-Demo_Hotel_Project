@@ -145,10 +145,10 @@ const About = () => {
         <div className={aboutDesign.footContent1}>Follow On</div>
 
         <div className={aboutDesign.footImages}>
-          <a href={socialHandles.linkedin} target='_blank'><img className={aboutDesign.footLogo} src={linkedinImg} alt='LinkedIn Logo' /></a>
-          <a href={socialHandles.facebook} target='_blank'><img className={aboutDesign.footLogo} src={facebookImg} alt='Facebook Logo' /></a>
-          <a href={socialHandles.instagram} target='_blank'><img className={aboutDesign.footLogo} src={instagramImg} alt='Instagram Logo' /></a>
-          <a href={socialHandles.twitter} target='_blank'><img className={aboutDesign.footLogo} src={twitterImg} alt='Twitter Logo' /></a>
+          <a href={socialHandles.linkedin} target='_blank' rel='noopener noreferrer'><img className={aboutDesign.footLogo} src={linkedinImg} alt='LinkedIn Logo' /></a>
+          <a href={socialHandles.facebook} target='_blank' rel='noopener noreferrer'><img className={aboutDesign.footLogo} src={facebookImg} alt='Facebook Logo' /></a>
+          <a href={socialHandles.instagram} target='_blank' rel='noopener noreferrer'><img className={aboutDesign.footLogo} src={instagramImg} alt='Instagram Logo' /></a>
+          <a href={socialHandles.twitter} target='_blank' rel='noopener noreferrer'><img className={aboutDesign.footLogo} src={twitterImg} alt='Twitter Logo' /></a>
         </div> 
 
         <div className={aboutDesign.footContent2}>Copyright ©2024. All Rights Reserved.</div>

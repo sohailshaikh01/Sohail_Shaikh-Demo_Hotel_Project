@@ -187,10 +187,10 @@ const OrderedData = () => {
         <div className={orderedDataDesign.footcontent3}>Follow On</div>
 
         <div className={orderedDataDesign.footImages}>
-          <a href={socialHandles.linkedin} target='_blank'><img className={orderedDataDesign.footLogo} src={linkedinImg} alt='LinkedIn Logo' /></a>
-          <a href={socialHandles.facebook} target='_blank'><img className={orderedDataDesign.footLogo} src={facebookImg} alt='Facebook Logo' /></a>
-          <a href={socialHandles.instagram} target='_blank'><img className={orderedDataDesign.footLogo} src={instagramImg} alt='Instagram Logo' /></a>
-          <a href={socialHandles.twitter} target='_blank'><img className={orderedDataDesign.footLogo} src={twitterImg} alt='Twitter Logo' /></a>
+          <a href={socialHandles.linkedin} target='_blank' rel='noopener noreferrer'><img className={orderedDataDesign.footLogo} src={linkedinImg} alt='LinkedIn Logo' /></a>
+          <a href={socialHandles.facebook} target='_blank' rel='noopener noreferrer'><img className={orderedDataDesign.footLogo} src={facebookImg} alt='Facebook Logo' /></a>
+          <a href={socialHandles.instagram} target='_blank' rel='noopener noreferrer'><img className={orderedDataDesign.footLogo} src={instagramImg} alt='Instagram Logo' /></a>
+          <a href={socialHandles.twitter} target='_blank' rel='noopener noreferrer'><img className={orderedDataDesign.footLogo} src={twitterImg} alt='Twitter Logo' /></a>
         </div>
 
         <Link to='/privacy-terms'><div className={orderedDataDesign.privacyAndTerms}>Privacy Policy · Terms & Conditions</div></Link>
