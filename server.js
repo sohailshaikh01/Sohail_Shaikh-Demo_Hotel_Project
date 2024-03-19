@@ -9,7 +9,7 @@ app.use(cors());
 app.use(express.json());
 app.use(express.static(path.join(__dirname,'./client/build')));
 
-app.get('*', (_, res) => {
+app.get('*', async(_, res) => {
     res.sendFile(path.join(__dirname,'./client/build/index.html'), (err) => {
         res.status(500).send(err);
     })
