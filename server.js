@@ -4,7 +4,6 @@ const path = require('path');
 const {db,releaseConn} = require('./db')
 const app = express();
 const port = process.env.PORT || 3001;
-const connection = await db();
 
 app.use(cors());
 app.use(express.json());
@@ -17,6 +16,8 @@ app.get('*', (_, res) => {
 });
 
 app.post('/login', async(req, res) => {
+    const connection = await db();
+
     const {username, password} = req.body;
     const sqlQuery1 = 'select user_id, username from users where username = ?';
     const sqlQuery2 = 'select password from users where username = ? AND password = ?';
