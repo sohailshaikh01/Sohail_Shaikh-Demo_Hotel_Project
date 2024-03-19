@@ -1,15 +1,16 @@
 const express = require('express');
 const cors = require('cors');
 const path = require('path');
-const db = require('./db')
+const {db,releaseConn} = require('./db')
 const app = express();
 const port = process.env.PORT || 3001;
+const connection = await db();
 
 app.use(cors());
 app.use(express.json());
 app.use(express.static(path.join(__dirname,'./client/build')));
 
-app.get('*', async(_, res) => {
+app.get('*', (_, res) => {
     res.sendFile(path.join(__dirname,'./client/build/index.html'), (err) => {
         res.status(500).send(err);
     })
@@ -24,21 +25,31 @@ app.post('/login', async(req, res) => {
         if(err1) {
             console.error(err1);
             res.sendStatus(500);
+            releaseConn(connection);
+            return;
         }
         else {
             if(result1.length === 0)
+            {
                 res.sendStatus(404);
+                releaseConn(connection);
+            }
             else {
                 db.query(sqlQuery2, [username, password], (err2, result2) => {
                     if(err2) {
                         console.error(err2);
                         res.sendStatus(500);
+                        releaseConn(connection);
                     }
                     else {
                         if(result2.length === 0)
                             res.sendStatus(400);
                         else
+                        {
                             res.json({userId: result1[0].user_id });
+                            releaseConn(connection);
+
+                        }
                     }
                 });
             }
