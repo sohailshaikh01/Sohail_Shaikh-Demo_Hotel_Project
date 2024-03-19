@@ -9,7 +9,7 @@ const db = mysql.createPool({
     password: process.env.DbPassword,
     database: process.env.DbName,
     waitForConnections: true,
-    connectionLimit: 5,
+    connectionLimit: 10,
     queueLimit: 0
 });
 
@@ -31,4 +31,4 @@ db.getConnection((err, connection) => {
 //     console.log('connection closed');
 // })
 
-module.exports = {db};
+module.exports = db.promise();
