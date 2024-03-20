@@ -43,11 +43,11 @@ const Login = () => {
     });
   }
 
-  const handleFormSubmit = (event) => {
+  async function handleFormSubmit(event) {
 
     event.preventDefault();
 
-    fetch('https://plum-inquisitive-giraffe.cyclic.app/login' ,{
+    await fetch('https://plum-inquisitive-giraffe.cyclic.app/login' ,{
       method: 'POST',
       headers:{
         'Content-Type': 'application/json',
