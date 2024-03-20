@@ -47,7 +47,7 @@ const Login = () => {
 
     event.preventDefault();
 
-    fetch('http://localhost:3001/login' ,{
+    fetch('https://plum-inquisitive-giraffe.cyclic.app/login' ,{
       method: 'POST',
       headers:{
         'Content-Type': 'application/json',
