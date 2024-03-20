@@ -21,18 +21,18 @@ db.getConnection((err, connection) => {
     }
 });
 
-function releaseConn(connection){
-    if(connection)
-        connection.release();
-}
+// function releaseConn(connection){
+//     if(connection)
+//         connection.release();
+// }
 
-// db.release((err) => {
-//     if(err)
-//     {
-//         console.log(err);
-//         return;
-//     }
-//     console.log('connection closed');
-// })
+db.release((err) => {
+    if(err)
+    {
+        console.log(err);
+        return;
+    }
+    console.log('connection closed');
+})
 
 module.exports = {db,releaseConn}
