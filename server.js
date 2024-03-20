@@ -25,7 +25,7 @@ app.post('/login', async(req, res) => {
     await db.query(sqlQuery1, [username], (err1, result1) => {
         if(err1) {
             console.error(err1);
-            res.sendStatus(500);
+            res.send(500).json({err: err1});
             releaseConn(connection);
             return;
         }
@@ -39,7 +39,7 @@ app.post('/login', async(req, res) => {
                 db.query(sqlQuery2, [username, password], (err2, result2) => {
                     if(err2) {
                         console.error(err2);
-                        res.sendStatus(500);
+                        res.send(500).json({err: err1});
                         releaseConn(connection);
                     }
                     else {
