@@ -35,4 +35,4 @@ db.getConnection((err, connection) => {
 //     console.log('connection closed');
 // })
 
-module.exports = {db,releaseConn}
+module.exports = {db}
