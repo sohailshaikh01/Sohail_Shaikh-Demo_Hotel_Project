@@ -55,10 +55,10 @@ const Login = () => {
       body: JSON.stringify(LoginDetails),
     })
       .then(response => {
-        // if(response.status === 500){
-        //   alert("Internal server error occurred.\nPlease try after some time if error is occuring again and again during process.");
-        //   return;
-        // }
+        if(response.status === 500){
+          alert("Internal server error occurred.\nPlease try after some time if error is occuring again and again during process.");
+          return;
+        }
         if(response.status === 404) {
           alert("Username Doesn't Exist");
           return;
@@ -71,19 +71,16 @@ const Login = () => {
       })
       .then(resData => {
           console.log(resData);
-          alert(resData.err);
-          return;
-          // localStorage.setItem('loginConfirmation', JSON.stringify({login: true, userId: resData.userId}));
-          // loginSuccess.current.style.display = 'inline';
+          localStorage.setItem('loginConfirmation', JSON.stringify({login: true, userId: resData.userId}));
+          loginSuccess.current.style.display = 'inline';
 
-          // setTimeout(() => {
-          //   loginSuccess.current.style.display='none'
-          //   navigate('/');
-          // }, 1000)
+          setTimeout(() => {
+            loginSuccess.current.style.display='none'
+            navigate('/');
+          }, 1000)
       })
-      .catch(error=> {
-        alert(error.err);
-      })
+      .catch(error=>console.error(error)
+    );
 
   }
 
