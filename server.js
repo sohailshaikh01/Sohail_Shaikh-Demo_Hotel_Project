@@ -22,8 +22,8 @@ app.post('/login', (req, res) => {
 
     db.query(sqlQuery1, [username], (err1, result1) => {
         if(err1) {
-            throw new Error(err1);
-            // res.sendStatus(500);
+            console.error(err1);
+            res.sendStatus(500);
         }
         else {
             if(result1.length === 0)
@@ -31,8 +31,8 @@ app.post('/login', (req, res) => {
             else {
                 db.query(sqlQuery2, [username, password], (err2, result2) => {
                     if(err2) {
-                        throw new Error(err2);
-                        // res.sendStatus(500);
+                        console.error(err2);
+                        res.sendStatus(500);
                     }
                     else {
                         if(result2.length === 0)
@@ -330,6 +330,5 @@ app.post('/feedback', (req, res) => {
 });
 
 app.listen(port, () => {
-    console.log('server is running on port', port);
+    console.log('server is running');
 });
-
