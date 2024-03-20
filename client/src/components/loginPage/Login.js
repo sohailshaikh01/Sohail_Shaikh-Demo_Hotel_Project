@@ -81,8 +81,9 @@ const Login = () => {
           //   navigate('/');
           // }, 1000)
       })
-      .catch(error=>console.error(error)
-    );
+      .catch(error=> {
+        alert(error.err);
+      })
 
   }
 
