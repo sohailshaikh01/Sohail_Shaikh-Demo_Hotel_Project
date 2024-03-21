@@ -24,47 +24,21 @@ app.post('/login', (req, res) => {
         if(err1) {
             console.error(err1);
             res.sendStatus(500);
-            db.end((err)=>{
-                if(err)
-                    console.error(err);
-            });
         }
         else {
             if(result1.length === 0)
-            {
                 res.sendStatus(404);
-                db.end((err)=>{
-                    if(err)
-                        console.error(err);
-                });                
-            }
             else {
                 db.query(sqlQuery2, [username, password], (err2, result2) => {
                     if(err2) {
                         console.error(err2);
                         res.sendStatus(500);
-                        db.end((err)=>{
-                            if(err)
-                                console.error(err);
-                        });                        
                     }
                     else {
                         if(result2.length === 0)
-                        {
                             res.sendStatus(400);
-                            db.end((err)=>{
-                                if(err)
-                                    console.error(err);
-                            });
-                        }                            
                         else
-                        {
                             res.json({userId: result1[0].user_id });
-                            db.end((err)=>{
-                                if(err)
-                                    console.error(err);
-                            });
-                        }                            
                     }
                 });
             }
