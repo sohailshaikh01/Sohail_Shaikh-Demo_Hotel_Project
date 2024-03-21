@@ -24,8 +24,6 @@ db.getConnection((err, connection) => {
     }
 });
 
-db.releaseConnection();
-
 // db.end((err)=>{
 //     if(err)
 //         console.error(err);
