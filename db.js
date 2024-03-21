@@ -21,6 +21,11 @@ db.getConnection((err) => {
         console.log('Successfully connected to MySQL Database');
 });
 
-db.releaseConnection();
+db.end((err)=>{
+    if(err)
+        console.error(err);
+    else
+        console.log("Connection released successfully");
+});
 
 module.exports = {db};
