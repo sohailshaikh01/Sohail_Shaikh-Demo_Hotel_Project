@@ -27,7 +27,7 @@ db.getConnection((err, conn) => {
     }
             console.log('Successfully connected to MySQL Database');
 
-        conn.release();
+        // conn.release();
     
     // else
     // {
