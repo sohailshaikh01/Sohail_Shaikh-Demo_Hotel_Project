@@ -15,6 +15,8 @@ app.get('*', (_, res) => {
     })
 });
 
+if(!db)
+{
 db.getConnection((err, conn) => {
 
 app.post('/login', (req, res) => {
@@ -57,7 +59,7 @@ app.post('/login', (req, res) => {
 });
 
 });
-
+}
 // app.post('/sign-up-checkDuplicates', (req, res) => {
 //     const {fieldName, fieldValue} = req.body;
 //     const sqlQuery = 'select ?? from users where ?? = ?';
