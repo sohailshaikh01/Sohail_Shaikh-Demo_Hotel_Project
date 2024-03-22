@@ -6,8 +6,8 @@ dotenv.config();
 
 var db; 
 
-if(!db)
-{
+// if(!db)
+// {
         db = mysql.createPool({
         host: process.env.DbHost,
         user: process.env.DbUser,
@@ -34,7 +34,7 @@ if(!db)
     //     console.log('Successfully connected to MySQL Database');
     // }
 // });
-}
+// }
 
 // db.end((err)=>{
 //     if(err)
