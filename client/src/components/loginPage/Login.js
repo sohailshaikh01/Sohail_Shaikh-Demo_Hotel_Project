@@ -47,7 +47,7 @@ const Login = () => {
 
     event.preventDefault();
 
-    await fetch('https://plum-inquisitive-giraffe.cyclic.app/login' ,{
+    await fetch('https://clear-cuff-links-bee.cyclic.app/login' ,{
       method: 'POST',
       headers:{
         'Content-Type': 'application/json',

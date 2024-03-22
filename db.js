@@ -10,20 +10,26 @@ const db = mysql.createPool({
     password: process.env.DbPassword,
     database: process.env.DbName,
     waitForConnections: true,
-    connectionLimit: 5,
-    queueLimit: 0
 });
 
-var connection;
+// var connection;
 
 db.getConnection((err, conn) => {
     if(err)
-        console.error('Error connecting to MySQL Database', err);
-    else
     {
-        console.log('Successfully connected to MySQL Database');
-        connection = conn;
+        console.error('Error connecting to MySQL Database', err);
+        return;
     }
+            console.log('Successfully connected to MySQL Database');
+    if(conn)
+    {
+        conn.release();
+        console.log('connection released successfully');
+    }
+    // else
+    // {
+    //     console.log('Successfully connected to MySQL Database');
+    // }
 });
 
 // db.end((err)=>{
@@ -33,4 +39,4 @@ db.getConnection((err, conn) => {
 //         console.log("Connection released successfully");
 // });
 
-module.exports = {db, connection};
+module.exports = db;
