@@ -19,21 +19,21 @@ if(!db)
 
 // var connection;
 
-db.getConnection((err, conn) => {
-    if(err)
-    {
-        console.error('Error connecting to MySQL Database', err);
-        return;
-    }
-            console.log('Successfully connected to MySQL Database');
+// db.getConnection((err, conn) => {
+//     if(err)
+//     {
+//         console.error('Error connecting to MySQL Database', err);
+//         return;
+//     }
+//             console.log('Successfully connected to MySQL Database');
 
-        conn.destroy();
+//         conn.destroy();
     
     // else
     // {
     //     console.log('Successfully connected to MySQL Database');
     // }
-});
+// });
 }
 
 // db.end((err)=>{
