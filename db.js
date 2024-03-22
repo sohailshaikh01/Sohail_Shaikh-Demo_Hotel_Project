@@ -4,9 +4,11 @@ const dotenv = require('dotenv');
 
 dotenv.config();
 
+var db; 
+
 if(!db)
 {
-    const db = mysql.createPool({
+        db = mysql.createPool({
         host: process.env.DbHost,
         user: process.env.DbUser,
         password: process.env.DbPassword,
