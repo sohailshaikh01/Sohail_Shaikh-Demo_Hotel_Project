@@ -1,7 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 const path = require('path');
-const {db} = require('./db')
+const {db,connection} = require('./db')
 const app = express();
 const port = process.env.PORT || 3001;
 
@@ -24,10 +24,13 @@ app.post('/login', (req, res) => {
         if(err1) {
             console.error(err1);
             res.sendStatus(500);
+            connection.release();
         }
         else {
-            if(result1.length === 0)
+            if(result1.length === 0) {
                 res.sendStatus(404);
+                connection.release();
+            }
             else {
                 db.query(sqlQuery2, [username, password], (err2, result2) => {
                     if(err2) {
@@ -35,10 +38,14 @@ app.post('/login', (req, res) => {
                         res.sendStatus(500);
                     }
                     else {
-                        if(result2.length === 0)
+                        if(result2.length === 0) {
                             res.sendStatus(400);
-                        else
+                            connection.release();
+                        }
+                        else {
                             res.json({userId: result1[0].user_id });
+                            connection.release();
+                        }
                     }
                 });
             }
