@@ -15,38 +15,41 @@ app.get('*', (_, res) => {
     })
 });
 
-app.post('/login', (req, res) => {
-    const {username, password} = req.body;
-    const sqlQuery1 = 'select user_id, username from users where username = ?';
-    const sqlQuery2 = 'select password from users where username = ? AND password = ?';
-
-    db.query(sqlQuery1, [username], (err1, result1) => {
-        if(err1) {
-            console.error(err1);
-            res.sendStatus(500);
-        }
-        else {
-            if(result1.length === 0) {
-                res.sendStatus(404);
+db.getConnection((err, conn) => {
+    app.post('/login', (req, res) => {
+        const {username, password} = req.body;
+        const sqlQuery1 = 'select user_id, username from users where username = ?';
+        const sqlQuery2 = 'select password from users where username = ? AND password = ?';
+    
+        db.query(sqlQuery1, [username], (err1, result1) => {
+            if(err1) {
+                console.error(err1);
+                res.sendStatus(500);
             }
             else {
-                db.query(sqlQuery2, [username, password], (err2, result2) => {
-                    if(err2) {
-                        console.error(err2);
-                        res.sendStatus(500);
-                    }
-                    else {
-                        if(result2.length === 0) {
-                            res.sendStatus(400);
+                if(result1.length === 0) {
+                    res.sendStatus(404);
+                }
+                else {
+                    db.query(sqlQuery2, [username, password], (err2, result2) => {
+                        if(err2) {
+                            console.error(err2);
+                            res.sendStatus(500);
                         }
                         else {
-                            res.json({userId: result1[0].user_id });
+                            if(result2.length === 0) {
+                                res.sendStatus(400);
+                            }
+                            else {
+                                res.json({userId: result1[0].user_id });
+                            }
                         }
-                    }
-                });
+                    });
+                }
             }
-        }
+        });
     });
+    
 });
 
 app.post('/sign-up-checkDuplicates', (req, res) => {
