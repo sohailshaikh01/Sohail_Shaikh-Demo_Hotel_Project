@@ -4,6 +4,10 @@ const dotenv = require('dotenv');
 
 dotenv.config();
 
+var dbConnection = false;
+
+if(dbConnection === false)
+{
 const db = mysql.createPool({
     host: process.env.DbHost,
     user: process.env.DbUser,
@@ -24,7 +28,7 @@ db.getConnection((err, conn) => {
     }
             console.log('Successfully connected to MySQL Database');
 
-    
+        dbConnection = true;
         conn.release();
     
     // else
@@ -32,6 +36,7 @@ db.getConnection((err, conn) => {
     //     console.log('Successfully connected to MySQL Database');
     // }
 });
+}
 
 // db.end((err)=>{
 //     if(err)
