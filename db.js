@@ -4,20 +4,17 @@ const dotenv = require('dotenv');
 
 dotenv.config();
 
-var dbConnection = false;
-
-if(dbConnection === false)
+if(!db)
 {
-const db = mysql.createPool({
-    host: process.env.DbHost,
-    user: process.env.DbUser,
-    password: process.env.DbPassword,
-    database: process.env.DbName,
-    waitForConnections: true,
-    queueLimit: 0,
-    acquireTimeout: 10000
-});
-
+    const db = mysql.createPool({
+        host: process.env.DbHost,
+        user: process.env.DbUser,
+        password: process.env.DbPassword,
+        database: process.env.DbName,
+        waitForConnections: true,
+        queueLimit: 0
+    });
+}
 // var connection;
 
 db.getConnection((err, conn) => {
@@ -28,7 +25,6 @@ db.getConnection((err, conn) => {
     }
             console.log('Successfully connected to MySQL Database');
 
-        dbConnection = true;
         conn.release();
     
     // else
@@ -36,7 +32,6 @@ db.getConnection((err, conn) => {
     //     console.log('Successfully connected to MySQL Database');
     // }
 });
-}
 
 // db.end((err)=>{
 //     if(err)
