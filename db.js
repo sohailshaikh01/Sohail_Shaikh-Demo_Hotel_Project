@@ -10,6 +10,8 @@ const db = mysql.createPool({
     password: process.env.DbPassword,
     database: process.env.DbName,
     waitForConnections: true,
+    queueLimit: 0,
+    acquireTimeout: 10000
 });
 
 // var connection;
@@ -24,7 +26,6 @@ db.getConnection((err, conn) => {
 
     
         conn.release();
-        console.log(db._freeConnections.indexOf(conn));
     
     // else
     // {
