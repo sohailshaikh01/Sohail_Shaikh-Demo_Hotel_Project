@@ -21,11 +21,11 @@ db.getConnection((err, conn) => {
         return;
     }
             console.log('Successfully connected to MySQL Database');
-    if(conn)
-    {
+
+    
         conn.release();
-        console.log('connection released successfully');
-    }
+        console.log(db._freeConnections.indexOf(conn));
+    
     // else
     // {
     //     console.log('Successfully connected to MySQL Database');
