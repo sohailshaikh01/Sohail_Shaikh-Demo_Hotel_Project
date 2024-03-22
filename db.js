@@ -16,7 +16,7 @@ if(!db)
         waitForConnections: true,
         queueLimit: 0
     });
-}
+
 // var connection;
 
 db.getConnection((err, conn) => {
@@ -27,13 +27,14 @@ db.getConnection((err, conn) => {
     }
             console.log('Successfully connected to MySQL Database');
 
-        // conn.release();
+        conn.destroy();
     
     // else
     // {
     //     console.log('Successfully connected to MySQL Database');
     // }
 });
+}
 
 // db.end((err)=>{
 //     if(err)
