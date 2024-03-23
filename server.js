@@ -18,8 +18,6 @@ app.get('*', (_, res) => {
 
 app.post('/login', (req, res) => {
 
-    if(!db)
-    {
     console.log("hi");
 
     db.getConnection((err, conn) => {
@@ -64,7 +62,7 @@ app.post('/login', (req, res) => {
     });
     
 });
-    }
+    
 });
 // }
 // app.post('/sign-up-checkDuplicates', (req, res) => {
