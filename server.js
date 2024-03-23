@@ -19,6 +19,8 @@ if(!db)
 {
 db.getConnection((err, conn) => {
 
+console.log("got conn");
+
 app.post('/login', (req, res) => {
     const {username, password} = req.body;
     const sqlQuery1 = 'select user_id, username from users where username = ?';
