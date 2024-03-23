@@ -17,11 +17,13 @@ app.get('*', (_, res) => {
 
 // if(!db)
 // {
-db.getConnection((err, conn) => {
-
-console.log("got conn");
 
 app.post('/login', (req, res) => {
+
+    db.getConnection((err, conn) => {
+
+        console.log("got conn");
+        
     const {username, password} = req.body;
     const sqlQuery1 = 'select user_id, username from users where username = ?';
     const sqlQuery2 = 'select password from users where username = ? AND password = ?';
