@@ -6,8 +6,8 @@ dotenv.config();
 
 var db; 
 
-// if(!db)
-// {
+if(!db)
+{
         db = mysql.createPool({
         host: process.env.DbHost,
         user: process.env.DbUser,
@@ -16,6 +16,7 @@ var db;
         waitForConnections: true,
         queueLimit: 0
     });
+}
 
 // var connection;
 
