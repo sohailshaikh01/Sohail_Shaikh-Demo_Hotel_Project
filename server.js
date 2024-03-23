@@ -20,6 +20,7 @@ app.post('/login', (req, res) => {
 
     if(!db)
     {
+    console.log("hi");
 
     db.getConnection((err, conn) => {
 
