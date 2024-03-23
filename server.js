@@ -15,8 +15,8 @@ app.get('*', (_, res) => {
     })
 });
 
-if(!db)
-{
+// if(!db)
+// {
 db.getConnection((err, conn) => {
 
 console.log("got conn");
@@ -61,7 +61,7 @@ app.post('/login', (req, res) => {
 });
 
 });
-}
+// }
 // app.post('/sign-up-checkDuplicates', (req, res) => {
 //     const {fieldName, fieldValue} = req.body;
 //     const sqlQuery = 'select ?? from users where ?? = ?';
