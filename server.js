@@ -15,10 +15,11 @@ app.get('*', (_, res) => {
     })
 });
 
-// if(!db)
-// {
 
 app.post('/login', (req, res) => {
+
+    if(!db)
+    {
 
     db.getConnection((err, conn) => {
 
@@ -60,8 +61,9 @@ app.post('/login', (req, res) => {
             }
         }
     });
+    
 });
-
+    }
 });
 // }
 // app.post('/sign-up-checkDuplicates', (req, res) => {
