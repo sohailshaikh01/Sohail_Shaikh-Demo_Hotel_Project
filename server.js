@@ -32,28 +32,28 @@ app.post('/login', (req, res) => {
         if(err1) {
             console.error(err1);
             res.sendStatus(500);
-            conn.destroy();
+            conn.release();
         }
         else {
             if(result1.length === 0) {
                 res.sendStatus(404);
-                conn.destroy();
+                conn.release();
             }
             else {
                 conn.query(sqlQuery2, [username, password], (err2, result2) => {
                     if(err2) {
                         console.error(err2);
                         res.sendStatus(500);
-                        conn.destroy();
+                        conn.release();
                     }
                     else {
                         if(result2.length === 0) {
                             res.sendStatus(400);
-                            conn.destroy();
+                            conn.release();
                         }
                         else {
                             res.json({userId: result1[0].user_id });
-                            conn.destroy();
+                            conn.release();
                         }
                     }
                 });
