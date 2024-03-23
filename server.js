@@ -20,6 +20,8 @@ app.post('/login', (req, res) => {
 
     console.log("hi");
 
+    if(!db)
+    {
     db.getConnection((err, conn) => {
 
         console.log("got conn");
@@ -32,37 +34,32 @@ app.post('/login', (req, res) => {
         if(err1) {
             console.error(err1);
             res.sendStatus(500);
-            conn.release();
         }
         else {
             if(result1.length === 0) {
                 res.sendStatus(404);
-                conn.release();
             }
             else {
                 conn.query(sqlQuery2, [username, password], (err2, result2) => {
                     if(err2) {
                         console.error(err2);
                         res.sendStatus(500);
-                        conn.release();
                     }
                     else {
                         if(result2.length === 0) {
                             res.sendStatus(400);
-                            conn.release();
                         }
                         else {
                             res.json({userId: result1[0].user_id });
-                            conn.release();
                         }
                     }
                 });
             }
         }
     });
-    
+    conn.destroy();
 });
-    
+}
 });
 // }
 // app.post('/sign-up-checkDuplicates', (req, res) => {
