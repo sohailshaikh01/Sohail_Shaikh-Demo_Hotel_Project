@@ -6,17 +6,22 @@ dotenv.config();
 
 var db; 
 
-if(!db)
-{
+// if(!db)
+// {
         db = mysql.createPool({
         host: process.env.DbHost,
         user: process.env.DbUser,
         password: process.env.DbPassword,
         database: process.env.DbName,
         waitForConnections: true,
-        queueLimit: 0
+        queueLimit: 0,
+        connectionLimit: 3,
+        maxIdle: 5,
+        idleTimeout: 60000,
+        enableKeepAlive: true,
+        keepAliveInitialDelay: 0
     });
-}
+// }
 
 // var connection;
 
