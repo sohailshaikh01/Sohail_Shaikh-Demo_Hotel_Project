@@ -228,12 +228,16 @@ hr{
     }
     .mandatory{
         font-size: 1.44rem;
-        right: -1%;
+        position: relative;
+        bottom: 90px;
+        left: 312px;
     }
     .feedbackTextarea{
-        width:70.7vw;
-        height: 8vh;
+        width: 290px;
+        height: 60px;
         padding: 4% 8% 10% 3%;
+        position: relative;
+        right: 1.1%;
     }
     .submit{
         width: 25%;
