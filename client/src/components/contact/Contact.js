@@ -75,7 +75,7 @@ const Contact = () => {
     const feedbackConfirmation = window.confirm("Sure to submit this feedback?");
 
     if(feedbackConfirmation === true) {
-      fetch('http://localhost:3001/feedback', {
+      fetch('https://demo-hotel-project.onrender.com/feedback', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

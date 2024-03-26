@@ -226,46 +226,46 @@ app.post('/cart', (req, res) => {
     });
 });
 
-app.post('/cart-data', (req, res) => {
-    db.getConnection((err, connection) => {
-        if(err)
-            console.error(err);
-        else {
-            data = req.body;
-            userId = data[0];
-            reqMsg = data[1];
-            const sqlQuery1 = 'delete from cart where user_id = ?';
+// app.post('/cart-data', (req, res) => {
+//     db.getConnection((err, connection) => {
+//         if(err)
+//             console.error(err);
+//         else {
+//             data = req.body;
+//             userId = data[0];
+//             reqMsg = data[1];
+//             const sqlQuery1 = 'delete from cart where user_id = ?';
 
-            if(reqMsg === 'eraseCart') {
-                db.query(sqlQuery1, [userId], (err) => {
-                    if(err) {
-                        console.error(err);
-                        res.sendStatus(500);
-                    }
-                    else
-                        res.sendStatus(200);
-                });
-            }
-            else {
-                const sqlQuery2 = 'select * from cart where user_id = ?';
+//             if(reqMsg === 'eraseCart') {
+//                 db.query(sqlQuery1, [userId], (err) => {
+//                     if(err) {
+//                         console.error(err);
+//                         res.sendStatus(500);
+//                     }
+//                     else
+//                         res.sendStatus(200);
+//                 });
+//             }
+//             else {
+//                 const sqlQuery2 = 'select * from cart where user_id = ?';
 
-                db.query(sqlQuery2, [userId], (err, result) => {
-                    if(err) {
-                        console.error(err);
-                        res.sendStatus(500);
-                    }
-                    else {
-                        if(result.length >= 1) 
-                            res.json({result });
-                        else 
-                            res.sendStatus(204);
-                    }
-                });
-            }
-        }
-        connection.release();
-    });
-});
+//                 db.query(sqlQuery2, [userId], (err, result) => {
+//                     if(err) {
+//                         console.error(err);
+//                         res.sendStatus(500);
+//                     }
+//                     else {
+//                         if(result.length >= 1) 
+//                             res.json({result });
+//                         else 
+//                             res.sendStatus(204);
+//                     }
+//                 });
+//             }
+//         }
+//         connection.release();
+//     });
+// });
 
 app.post('/order', (req, res) => {
     db.getConnection((err, connection) => {
