@@ -17,6 +17,7 @@ app.get('*', (_, res) => {
 
 app.post('/login', (req, res) => {
     db.getConnection((err, connection) => {
+        console.log("request received");
         if(err)
             console.error(err);
         else {
