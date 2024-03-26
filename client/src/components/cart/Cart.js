@@ -44,7 +44,7 @@ const Cart = () => {
   const resetCart = () => {
     const resetResult = window.confirm("Are you sure about resetting this cart? This will erase all cart items.");
     if(resetResult === true) {
-      fetch('http://localhost:3001/cart-data', {
+      fetch('https://demo-hotel-project.onrender.com/cart-data', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -97,7 +97,7 @@ const Cart = () => {
                   alert("Internal server error occurred.\nPlease try after some time if error is occuring again and again during process.");
                 else {
                   alert("Order Confirmed Successfully.\nThank You for Ordering through Hotel Demo.");
-                  fetch('http://localhost:3001/cart-data', {
+                  fetch('https://demo-hotel-project.onrender.com/cart-data', {
                     method: 'POST',
                     headers: {
                       'Content-Type': 'application/json',
@@ -135,7 +135,7 @@ const Cart = () => {
     if(loginConfirmation.login === false)
       navigate('/login');
 
-    fetch('http://localhost:3001/cart-data', {
+    fetch('https://demo-hotel-project.onrender.com/cart-data', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

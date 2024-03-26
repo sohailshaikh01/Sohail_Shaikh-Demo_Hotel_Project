@@ -47,7 +47,7 @@ const Login = () => {
 
     event.preventDefault();
 
-    await fetch('http://localhost:3001/login' ,{
+    await fetch('https://demo-hotel-project.onrender.com/login' ,{
       method: 'POST',
       headers:{
         'Content-Type': 'application/json',
