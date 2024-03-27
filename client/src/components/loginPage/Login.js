@@ -47,7 +47,7 @@ const Login = () => {
 
     event.preventDefault();
 
-    await fetch('https://demo-hotel-project.onrender.com/login' ,{
+    await fetch('https://better-blue-earmuffs.cyclic.app/login' ,{
       method: 'POST',
       headers:{
         'Content-Type': 'application/json',
