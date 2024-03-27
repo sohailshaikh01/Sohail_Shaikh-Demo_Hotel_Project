@@ -16,8 +16,8 @@ db = mysql.createPool({
     connectionLimit: 5,
     maxIdle: 5,
     idleTimeout: 60000,
-    enableKeepAlive: true,
-    keepAliveInitialDelay: 0
+    // enableKeepAlive: true,
+    // keepAliveInitialDelay: 0
 });
 
 module.exports = db;
