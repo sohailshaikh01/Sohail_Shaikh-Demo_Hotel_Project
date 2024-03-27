@@ -14,8 +14,8 @@ db = mysql.createPool({
     waitForConnections: true,
     queueLimit: 0,
     connectionLimit: 5,
-    maxIdle: 5,
-    idleTimeout: 60000,
+    // maxIdle: 5,
+    // idleTimeout: 60000,
     // enableKeepAlive: true,
     // keepAliveInitialDelay: 0
 });

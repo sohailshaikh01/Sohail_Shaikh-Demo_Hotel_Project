@@ -50,7 +50,7 @@ app.post('/login', (req, res) => {
                 }
             });
         }
-        connection.release();
+        connection.destroy();
     });
 });
 
@@ -75,7 +75,7 @@ app.post('/sign-up-checkDuplicates', (req, res) => {
                 }
             });
         }
-        connection.release();
+        connection.destroy();
     });
 });
 
@@ -96,7 +96,7 @@ app.post('/sign-up', (req, res) => {
                     res.sendStatus(201);
             });
         }
-        connection.release();
+        connection.destroy();
     });
 });
 
@@ -135,7 +135,7 @@ app.post('/profile', (req, res) => {
                 });
             }
         }
-        connection.release();
+        connection.destroy();
     });
 });
 
@@ -173,7 +173,7 @@ app.post('/password-update', (req, res) => {
                 }
             });
         }
-        connection.release();
+        connection.destroy();
     });
 });
 
@@ -223,7 +223,7 @@ app.post('/cart', (req, res) => {
                 });
             }
         }
-        connection.release();
+        connection.destroy();
     });
 });
 
@@ -264,7 +264,7 @@ app.post('/cart-data', (req, res) => {
                 });
             }
         }
-        connection.release();
+        connection.destroy();
     });
 });
 
@@ -348,7 +348,7 @@ app.post('/order', (req, res) => {
                 });
             }
         }
-        connection.release();
+        connection.destroy();
     });
 });
 
@@ -374,7 +374,7 @@ app.post('/ordered-data', (req, res) => {
                 }
             });
         }
-        connection.release();
+        connection.destroy();
     });
 });
 
@@ -396,7 +396,7 @@ app.post('/feedback', (req, res) => {
                     res.sendStatus(200);
             });
         }
-        connection.release();
+        connection.destroy();
     });
 });
 
