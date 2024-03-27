@@ -55,7 +55,7 @@ const PasswordModification = () => {
 
     const confirmPasswordUpdate = window.confirm("Sure about updating your Password?");
     if(confirmPasswordUpdate === true) {
-      fetch('http://localhost:3001/password-update', {
+      fetch('https://sohailshaikh-hoteldemo.cyclic.app/password-update', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

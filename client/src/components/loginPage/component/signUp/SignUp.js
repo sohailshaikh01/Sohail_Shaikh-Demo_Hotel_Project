@@ -58,7 +58,7 @@ const SignUp = () => {
     else {
       phoneLengthAlert1.current.style.display='none';
 
-      fetch('http://localhost:3001/sign-up-checkDuplicates' ,{
+      fetch('https://sohailshaikh-hoteldemo.cyclic.app/sign-up-checkDuplicates' ,{
         method: 'POST',
         headers:{
           'Content-Type': 'application/json',
@@ -138,7 +138,7 @@ const SignUp = () => {
     if(phoneLengthFlag.current === 0 && usernameFlag.current === 0 && phoneFlag.current === 0) {
       event.preventDefault();
 
-      fetch('http://localhost:3001/sign-up' ,{
+      fetch('https://sohailshaikh-hoteldemo.cyclic.app/sign-up' ,{
         method: 'POST',
         headers:{
           'Content-Type': 'application/json',

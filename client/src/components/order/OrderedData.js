@@ -48,7 +48,7 @@ const OrderedData = () => {
     if(loginConfirmation.login === false)
       navigate('/login');
 
-    fetch('http://localhost:3001/ordered-data', {
+    fetch('https://sohailshaikh-hoteldemo.cyclic.app/ordered-data', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

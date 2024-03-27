@@ -13,11 +13,11 @@ db = mysql.createPool({
     database: process.env.DbName,
     waitForConnections: true,
     queueLimit: 0,
-    connectionLimit: 5
-    // maxIdle: 5,
-    // idleTimeout: 60000,
-    // enableKeepAlive: true,
-    // keepAliveInitialDelay: 0
+    connectionLimit: 5,
+    maxIdle: 5,
+    idleTimeout: 60000,
+    enableKeepAlive: true,
+    keepAliveInitialDelay: 0
 });
 
 module.exports = db;

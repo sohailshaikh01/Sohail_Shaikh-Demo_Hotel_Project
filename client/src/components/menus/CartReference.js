@@ -35,7 +35,7 @@ const CartReference = ({children}) => {
   useEffect(() => {
     if(cart.length != 0 && loginConfirmation.userId != null) {
       const filteredCartItems = cart.filter(item => Object.values(item)[0] !== 0);
-      fetch('http://localhost:3001/cart', {
+      fetch('https://sohailshaikh-hoteldemo.cyclic.app/cart', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

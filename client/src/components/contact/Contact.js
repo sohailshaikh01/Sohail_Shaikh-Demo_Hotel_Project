@@ -75,7 +75,7 @@ const Contact = () => {
     const feedbackConfirmation = window.confirm("Sure to submit this feedback?");
 
     if(feedbackConfirmation === true) {
-      fetch('https://demo-hotel-project.onrender.com/feedback', {
+      fetch('https://sohailshaikh-hoteldemo.cyclic.app/feedback', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

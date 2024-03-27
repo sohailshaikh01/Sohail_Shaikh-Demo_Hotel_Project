@@ -65,7 +65,7 @@ const Profile = () => {
 
     const confirmUpdate = window.confirm("Sure about updating your Profile?");
     if(confirmUpdate === true) {
-      fetch('http://localhost:3001/profile', {
+      fetch('https://sohailshaikh-hoteldemo.cyclic.app/profile', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -89,7 +89,7 @@ const Profile = () => {
       navigate('/login');
     }
 
-    fetch('http://localhost:3001/profile', {
+    fetch('https://sohailshaikh-hoteldemo.cyclic.app/profile', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

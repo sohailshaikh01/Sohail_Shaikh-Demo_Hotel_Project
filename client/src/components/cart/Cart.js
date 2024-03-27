@@ -44,7 +44,7 @@ const Cart = () => {
   const resetCart = () => {
     const resetResult = window.confirm("Are you sure about resetting this cart? This will erase all cart items.");
     if(resetResult === true) {
-      fetch('https://demo-hotel-project.onrender.com/cart-data', {
+      fetch('https://sohailshaikh-hoteldemo.cyclic.app/cart-data', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -74,7 +74,7 @@ const Cart = () => {
   const confirmOrder = () => {
     const confirm = window.confirm("Sure about confirming this order?");
     if(confirm === true) {
-      fetch('http://localhost:3001/order', {
+      fetch('https://sohailshaikh-hoteldemo.cyclic.app/order', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -85,7 +85,7 @@ const Cart = () => {
           if(response.status === 500) 
             alert("Internal server error occurred.\nPlease try after some time if error is occuring again and again during process.");
           else if(response.status === 204) {
-            fetch('http://localhost:3001/order', {
+            fetch('https://sohailshaikh-hoteldemo.cyclic.app/order', {
               method: 'POST',
               headers: {
                 'Content-Type': 'application/json',
@@ -97,7 +97,7 @@ const Cart = () => {
                   alert("Internal server error occurred.\nPlease try after some time if error is occuring again and again during process.");
                 else {
                   alert("Order Confirmed Successfully.\nThank You for Ordering through Hotel Demo.");
-                  fetch('https://demo-hotel-project.onrender.com/cart-data', {
+                  fetch('https://sohailshaikh-hoteldemo.cyclic.app/cart-data', {
                     method: 'POST',
                     headers: {
                       'Content-Type': 'application/json',
@@ -135,7 +135,7 @@ const Cart = () => {
     if(loginConfirmation.login === false)
       navigate('/login');
 
-    fetch('https://demo-hotel-project.onrender.com/cart-data', {
+    fetch('https://sohailshaikh-hoteldemo.cyclic.app/cart-data', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
